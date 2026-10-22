@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+/* Formulário de contato e pedido (fale-conosco.html). */
+
+.intro-form,
+#fContato,
+#resumo {
+	max-width: 34rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.intro-form {
+	margin-top: 1rem;
+}
+
+#fContato fieldset {
+	margin: 0 0 1.25rem;
+	padding: 0.75rem 1rem 1rem;
+	border: 1px solid var(--borda);
+}
+
+#fContato legend {
+	padding: 0 0.35rem;
+	font-size: 1.05rem;
+	font-weight: bold;
+	color: var(--cinza-texto);
+}
+
+.campo {
+	margin: 0 0 0.85rem;
+}
+
+.campo > label,
+.campo > .rotulo {
+	display: block;
+	margin-bottom: 0.2rem;
+	font-weight: bold;
+}
+
+#fContato input,
+#fContato select,
+#fContato textarea {
+	max-width: 100%;
+	padding: 0.5rem;
+	border: 1px solid var(--borda-campo);
+	border-radius: 3px;
+	background-color: var(--branco);
+	color: inherit;
+	font: inherit;
+}
+
+#fContato input[type="text"],
+#fContato input[type="email"],
+#fContato select,
+#fContato textarea {
+	width: 100%;
+}
+
+#fContato input[type="color"] {
+	width: 4rem;
+	height: 2.75rem;
+	padding: 0.2rem;
+}
+
+#fContato input[type="radio"],
+#fContato input[type="checkbox"] {
+	width: 1.25rem;
+	height: 1.25rem;
+	margin: 0;
+	padding: 0;
+}
+
+#fContato input[type="range"] {
+	flex: 1;
+	padding: 0;
+	border: 0;
+}
+
+#fContato input:hover,
+#fContato select:hover,
+#fContato textarea:hover {
+	background-color: var(--fundo-suave);
+}
+
+#fContato :disabled {
+	background-color: var(--cinza-claro);
+	cursor: not-allowed;
+}
+
+#fContato :user-invalid {
+	border-color: var(--vermelho);
+	box-shadow: 0 0 0 1px var(--vermelho);
+}
+
+#fContato #sexo {
+	margin-bottom: 0.85rem;
+	padding: 0.5rem 0.75rem;
+}
+
+#fContato #sexo legend {
+	font-size: 1rem;
+	color: inherit;
+}
+
+.opcao {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	min-height: 2rem;
+	margin: 0;
+}
+
+.faixa {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.total {
+	font-size: 1.1rem;
+}
+
+.total output {
+	font-weight: bold;
+}
+
+.acoes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin: 0 0 1rem;
+}
+
+.acoes img {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+#aviso-form {
+	min-height: 1.5rem;
+	font-weight: bold;
+	color: var(--erro);
+}
+
+#resumo {
+	margin-top: 1rem;
+	padding: 1rem;
+	border: 2px solid var(--cinza-escuro);
+	background-color: var(--fundo-suave);
+}
+
+#resumo h2 {
+	margin-top: 0;
+}
+
+#resumo-lista {
+	margin: 0;
+}
+
+#resumo-lista dt {
+	font-weight: bold;
+}
+
+#resumo-lista dd {
+	margin: 0 0 0.6rem;
+	overflow-wrap: anywhere;
+	white-space: pre-line;
+}
+
+/* Em telas largas voltam os ícones de fundo de cada bloco, como no exercício original. */
+@media (min-width: 36rem) {
+	#fContato fieldset {
+		padding-right: 8rem;
+		background-repeat: no-repeat;
+		background-position: right 1rem bottom 1rem;
+		background-size: 6rem;
+	}
+
+	#fContato #sexo {
+		padding-right: 0.75rem;
+		background-image: none;
+	}
+
+	#usuario {
+		background-image: url("../_imagens/icone-contato.svg");
+	}
+
+	#endereco {
+		background-image: url("../_imagens/icone-endereco.svg");
+	}
+
+	#mensagem {
+		background-image: url("../_imagens/icone-mensagem.svg");
+	}
+
+	#pedido {
+		background-image: url("../_imagens/icone-pagamento.svg");
+	}
+}

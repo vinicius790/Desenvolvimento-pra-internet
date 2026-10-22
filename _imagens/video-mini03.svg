@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img">
+	<title>Cartaz do vídeo: Primeiros passos</title>
+	<defs>
+	<linearGradient id="fundo" x1="0" y1="0" x2="1" y2="1">
+	<stop offset="0" stop-color="#134e5e"/>
+	<stop offset="1" stop-color="#71b280"/>
+	</linearGradient>
+	</defs>
+	<rect width="640" height="360" fill="url(#fundo)"/>
+	<g transform="translate(170 50) scale(1.5)" stroke-linecap="round" stroke-linejoin="round">
+	<path d="M10 40 Q100 14 190 40" fill="none" stroke="#f2f2f2" stroke-width="6"/>
+	<path d="M88 30 L90 50 M112 30 L110 50" fill="none" stroke="#8a8a8a" stroke-width="2.5"/>
+	<ellipse cx="90" cy="57" rx="5" ry="8" fill="#e3e3e3" stroke="#8a8a8a" stroke-width="2"/>
+	<ellipse cx="110" cy="57" rx="5" ry="8" fill="#e3e3e3" stroke="#8a8a8a" stroke-width="2"/>
+	<rect x="146" y="31" width="52" height="18" rx="7" fill="#2b2b2b"/>
+	<rect x="126" y="28" width="28" height="24" rx="3" fill="#bfe3ff" fill-opacity=".8" stroke="#5c8fb5" stroke-width="2"/>
+	<circle cx="168" cy="40" r="4" fill="#7fb7e6"/>
+	</g>
+	<text x="320" y="248" font-size="40" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">Primeiros passos</text>
+	<text x="320" y="290" font-size="22" font-family="Arial, Helvetica, sans-serif" fill="#f0f0f0" text-anchor="middle">Vídeo · 1 min 07 s</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380" role="img">
+	<title>Esquema do Google Glass com tela, câmera, sensores e bateria destacados em vermelho</title>
+	<rect width="600" height="380" fill="#ffffff"/>
+	<g stroke-linecap="round" stroke-linejoin="round">
+	<path d="M185 152 C150 70 330 40 470 70 C530 84 560 110 575 150" fill="none" stroke="#9a9a9a" stroke-width="5"/>
+	<path d="M265 64 L270 104 M325 57 L332 97" fill="none" stroke="#9a9a9a" stroke-width="3"/>
+	<ellipse cx="272" cy="116" rx="9" ry="14" fill="#f4f4f4" stroke="#9a9a9a" stroke-width="3"/>
+	<ellipse cx="334" cy="109" rx="9" ry="14" fill="#f4f4f4" stroke="#9a9a9a" stroke-width="3"/>
+	<path d="M455 140 L520 134 Q560 132 566 170 L572 262 Q572 290 550 290 Q530 290 526 268 L520 214 L460 214 Z" fill="#f6d5d3" stroke="#c62828" stroke-width="2.5"/>
+	<path d="M180 168 L455 140 Q472 140 474 156 L476 196 Q476 212 460 214 L196 240 Q180 240 180 226 Z" fill="#f4f4f4" stroke="#606060" stroke-width="2.5"/>
+	<path d="M270 166 L440 149 L442 205 L272 224 Z" fill="#f6d5d3" stroke="#c62828" stroke-width="2.5" stroke-dasharray="8 6"/>
+	<path d="M150 168 L180 168 L180 228 L150 212 Z" fill="#e3e3e3" stroke="#606060" stroke-width="2.5"/>
+	<path d="M50 172 L150 160 L150 212 L50 224 Z" fill="#f6d5d3" stroke="#c62828" stroke-width="2.5"/>
+	<circle cx="215" cy="205" r="17" fill="#f6d5d3" stroke="#c62828" stroke-width="2.5"/>
+	<circle cx="215" cy="205" r="7" fill="#606060"/>
+	</g>
+</svg>

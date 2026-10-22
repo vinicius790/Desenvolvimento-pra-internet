@@ -1,0 +1,40 @@
+name: Integração Contínua (CI)
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verificar-e-testar:
+    name: Node ${{ matrix.node-version }} no ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [20, 22, 24]
+
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Conferir integridade dos arquivos derivados (índice, dados e links)
+        run: node scripts/gerar-indice.js --verificar
+
+      - name: Executar suíte de testes automatizados
+        run: node --test

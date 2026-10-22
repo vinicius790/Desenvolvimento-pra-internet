@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" width="120" height="90" role="img">
+	<title>Especificações</title>
+	<g transform="rotate(-8 60 45)">
+	<rect x="16" y="12" width="88" height="66" rx="3" fill="#2f6fd0"/>
+	<g fill="none" stroke="#ffffff" stroke-width="2">
+	<rect x="24" y="20" width="32" height="20"/>
+	<rect x="64" y="20" width="32" height="20"/>
+	<rect x="24" y="48" width="32" height="22"/>
+	<rect x="64" y="48" width="32" height="22"/>
+	<path d="M28 27 H52 M28 33 H46 M68 27 H92 M68 33 H86 M28 56 H52 M28 62 H46 M68 56 H92 M68 62 H86"/>
+	</g>
+	</g>
+	<path d="M98 66 Q112 64 110 80 Q102 74 98 66 Z" fill="#bfd4f5"/>
+</svg>

@@ -1,0 +1,23 @@
+# Arquivos locais de backup/organização (não fazem parte do site)
+BACKUP_ORIGINAL_antes_de_organizar.zip
+LOG_REORGANIZACAO.txt
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# Dependências eventuais, temporários e logs
+node_modules/
+*.log
+*.tmp
+
+# Segredos e variáveis de ambiente
+.env
+.env.*
+!.env.example
+*.key
+*.pem

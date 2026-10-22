@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" width="120" height="90" role="img">
+	<title>Linha do tempo</title>
+	<path d="M8 45 H112" fill="none" stroke="#606060" stroke-width="4" stroke-linecap="round"/>
+	<circle cx="22" cy="45" r="8" fill="#e3e3e3" stroke="#606060" stroke-width="3"/>
+	<circle cx="60" cy="45" r="10" fill="#2f6fd0"/>
+	<circle cx="98" cy="45" r="8" fill="#e3e3e3" stroke="#606060" stroke-width="3"/>
+	<rect x="8" y="12" width="28" height="16" rx="3" fill="#bfe3ff" stroke="#606060" stroke-width="2"/>
+	<rect x="46" y="62" width="28" height="16" rx="3" fill="#bfe3ff" stroke="#606060" stroke-width="2"/>
+	<rect x="84" y="12" width="28" height="16" rx="3" fill="#bfe3ff" stroke="#606060" stroke-width="2"/>
+	<path d="M22 28 V37 M60 55 V62 M98 28 V37" fill="none" stroke="#606060" stroke-width="2"/>
+</svg>

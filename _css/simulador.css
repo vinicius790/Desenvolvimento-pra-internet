@@ -1,0 +1,426 @@
+@charset "UTF-8";
+
+/* Estilos do Simulador Interativo do Google Glass (3D + Prisma HUD + Comandos de Voz) */
+
+.secao-simulador {
+	margin: 2rem 0;
+	padding: 1.5rem;
+	border: 2px solid var(--cinza-escuro);
+	border-radius: 12px;
+	background-color: var(--branco);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.simulador-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	margin-top: 1.25rem;
+}
+
+@media (min-width: 52rem) {
+	.simulador-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* Painel do Modelo 3D */
+.painel-3d {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--borda);
+	border-radius: 8px;
+	padding: 1rem;
+	background-color: var(--fundo-suave);
+}
+
+.painel-3d h3,
+.painel-hud h3 {
+	margin: 0 0 0.75rem;
+	font-size: 1.15rem;
+	color: var(--preto);
+}
+
+.canvas-container-3d {
+	position: relative;
+	width: 100%;
+	height: 260px;
+	background: radial-gradient(circle at center, #2c3e50 0%, #111827 100%);
+	border-radius: 6px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+#canvas-glass-3d {
+	width: 100%;
+	height: 100%;
+	display: block;
+	cursor: grab;
+}
+
+#canvas-glass-3d:active {
+	cursor: grabbing;
+}
+
+.controles-3d {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 0.75rem;
+}
+
+.btn-3d {
+	padding: 0.35rem 0.65rem;
+	border: 1px solid var(--cinza-escuro);
+	border-radius: 4px;
+	background-color: var(--branco);
+	color: var(--preto);
+	font: inherit;
+	font-size: 0.85rem;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.btn-3d:hover {
+	background-color: var(--cinza-claro);
+}
+
+.hotspots-3d {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin-top: 0.75rem;
+}
+
+.btn-hotspot {
+	padding: 0.3rem 0.6rem;
+	border: 1px solid var(--foco);
+	border-radius: 20px;
+	background-color: var(--branco);
+	color: var(--foco);
+	font: inherit;
+	font-size: 0.8rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.btn-hotspot:hover,
+.btn-hotspot.ativo {
+	background-color: var(--foco);
+	color: var(--branco);
+}
+
+.info-hotspot {
+	margin-top: 0.75rem;
+	padding: 0.65rem 0.85rem;
+	border-left: 4px solid var(--foco);
+	background-color: var(--branco);
+	border-radius: 0 4px 4px 0;
+	font-size: 0.85rem;
+	min-height: 3.5rem;
+}
+
+/* Painel do HUD (Heads-Up Display) */
+.painel-hud {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--borda);
+	border-radius: 8px;
+	padding: 1rem;
+	background-color: var(--fundo-suave);
+}
+
+.hud-prisma-moldura {
+	position: relative;
+	width: 100%;
+	height: 220px;
+	background-color: #050811;
+	border: 2px solid rgba(100, 200, 255, 0.4);
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 0 15px rgba(0, 150, 255, 0.25), inset 0 0 25px rgba(0, 0, 0, 0.8);
+	display: flex;
+	flex-direction: column;
+}
+
+.hud-prisma-topo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.4rem 0.75rem;
+	background: rgba(15, 23, 42, 0.8);
+	border-bottom: 1px solid rgba(100, 200, 255, 0.2);
+	font-size: 0.75rem;
+	color: #94a3b8;
+}
+
+.hud-bateria-icone {
+	display: inline-block;
+	width: 18px;
+	height: 10px;
+	border: 1px solid #94a3b8;
+	border-radius: 2px;
+	position: relative;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+.hud-bateria-icone::after {
+	content: "";
+	position: absolute;
+	right: -3px;
+	top: 2px;
+	width: 2px;
+	height: 4px;
+	background: #94a3b8;
+	border-radius: 0 1px 1px 0;
+}
+
+.hud-bateria-carga {
+	width: 80%;
+	height: 100%;
+	background: #22c55e;
+}
+
+.prisma-hud-conteudo {
+	flex: 1;
+	position: relative;
+	padding: 0.75rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #f8fafc;
+	font-family: var(--fonte-fina);
+}
+
+.hud-card {
+	position: absolute;
+	inset: 0.75rem;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	animation: surgir-card 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hud-card.ativo {
+	display: flex;
+}
+
+@keyframes surgir-card {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.hud-hora-grande {
+	font-size: 2.75rem;
+	font-weight: 300;
+	line-height: 1;
+	color: #ffffff;
+	text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.hud-subtexto {
+	font-size: 0.85rem;
+	color: #94a3b8;
+	margin-top: 0.35rem;
+}
+
+.hud-dica-ok {
+	margin-top: 0.75rem;
+	font-size: 0.8rem;
+	color: #38bdf8;
+	font-weight: 600;
+}
+
+.hud-clima-temperatura {
+	font-size: 2.25rem;
+	font-weight: 300;
+	color: #fbbf24;
+}
+
+.hud-gps-direcao {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.hud-gps-seta {
+	font-size: 2.5rem;
+	color: #4ade80;
+}
+
+.hud-camera-viewfinder {
+	width: 100%;
+	height: 100%;
+	border: 1px dashed rgba(255, 255, 255, 0.3);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.hud-camera-reticulo {
+	width: 40px;
+	height: 40px;
+	border: 2px solid rgba(56, 189, 248, 0.7);
+	border-radius: 50%;
+	position: relative;
+}
+
+.hud-camera-reticulo::after {
+	content: "";
+	position: absolute;
+	inset: 6px;
+	border: 1px solid rgba(56, 189, 248, 0.5);
+	border-radius: 50%;
+}
+
+.hud-flash-ativo {
+	animation: flash-tela 0.4s ease-out;
+}
+
+@keyframes flash-tela {
+	0% {
+		background-color: #ffffff;
+	}
+	100% {
+		background-color: #050811;
+	}
+}
+
+.hud-ondas-voz {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	height: 50px;
+	margin: 0.75rem 0;
+}
+
+.hud-onda {
+	width: 6px;
+	height: 16px;
+	background-color: #38bdf8;
+	border-radius: 3px;
+	animation: onda-voz 1.2s infinite ease-in-out;
+}
+
+.hud-onda:nth-child(2) { animation-delay: 0.15s; }
+.hud-onda:nth-child(3) { animation-delay: 0.3s; }
+.hud-onda:nth-child(4) { animation-delay: 0.45s; }
+.hud-onda:nth-child(5) { animation-delay: 0.6s; }
+
+@keyframes onda-voz {
+	0%, 100% { height: 12px; }
+	50% { height: 38px; }
+}
+
+/* Controles do Touchpad do HUD */
+.controles-hud-touchpad {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	margin-top: 0.75rem;
+}
+
+.btn-hud-nav {
+	padding: 0.4rem 0.8rem;
+	border: 1px solid var(--cinza-escuro);
+	border-radius: 4px;
+	background-color: var(--branco);
+	color: var(--preto);
+	font: inherit;
+	font-size: 0.85rem;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.btn-hud-nav:hover {
+	background-color: var(--cinza-claro);
+}
+
+/* Área de Comandos de Voz */
+.secao-voz {
+	margin-top: 1rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--borda);
+}
+
+.btn-microfone {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6rem;
+	width: 100%;
+	padding: 0.65rem 1rem;
+	border: 2px solid var(--foco);
+	border-radius: 6px;
+	background-color: var(--branco);
+	color: var(--foco);
+	font: inherit;
+	font-size: 0.95rem;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.btn-microfone:hover {
+	background-color: var(--foco);
+	color: var(--branco);
+}
+
+.btn-microfone[aria-pressed="true"] {
+	background-color: #c62828;
+	border-color: #c62828;
+	color: #ffffff;
+	animation: pulse-mic 1.2s infinite ease-in-out;
+}
+
+@keyframes pulse-mic {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.02); }
+}
+
+.status-voz {
+	margin: 0.5rem 0;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--cinza-forte);
+	min-height: 1.4rem;
+	text-align: center;
+}
+
+.comandos-botoes-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+	gap: 0.4rem;
+	margin-top: 0.5rem;
+}
+
+.btn-cmd-voz {
+	padding: 0.4rem 0.5rem;
+	border: 1px solid var(--borda-campo);
+	border-radius: 4px;
+	background-color: var(--branco);
+	color: var(--preto);
+	font: inherit;
+	font-size: 0.8rem;
+	cursor: pointer;
+	text-align: center;
+	transition: background-color 0.2s ease;
+}
+
+.btn-cmd-voz:hover {
+	background-color: var(--cinza-medio);
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" width="120" height="90" role="img">
+	<title>Multimídia</title>
+	<g transform="rotate(-10 50 45)">
+	<rect x="14" y="14" width="62" height="64" fill="#3a3a3a"/>
+	<g fill="#ffffff">
+	<rect x="18" y="19" width="7" height="7"/>
+	<rect x="18" y="33" width="7" height="7"/>
+	<rect x="18" y="47" width="7" height="7"/>
+	<rect x="18" y="61" width="7" height="7"/>
+	<rect x="65" y="19" width="7" height="7"/>
+	<rect x="65" y="33" width="7" height="7"/>
+	<rect x="65" y="47" width="7" height="7"/>
+	<rect x="65" y="61" width="7" height="7"/>
+	</g>
+	<rect x="29" y="19" width="32" height="24" fill="#e8833a"/>
+	<rect x="29" y="47" width="32" height="24" fill="#2f6fd0"/>
+	<path d="M40 25 L52 31 L40 37 Z" fill="#ffffff"/>
+	</g>
+	<path d="M92 24 L92 62" stroke="#606060" stroke-width="5" stroke-linecap="round"/>
+	<path d="M92 24 Q104 26 108 38" fill="none" stroke="#606060" stroke-width="5" stroke-linecap="round"/>
+	<ellipse cx="84" cy="64" rx="10" ry="7" fill="#606060"/>
+</svg>

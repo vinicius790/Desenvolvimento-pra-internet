@@ -1,0 +1,102 @@
+[
+	{
+		"id": "anuncio",
+		"data": "2012-04-04",
+		"titulo": { "pt": "O Project Glass é anunciado", "en": "Project Glass is announced" },
+		"texto": {
+			"pt": "O Google apresenta o projeto do laboratório Google[x] e publica o vídeo-conceito “One day...”, que mostra um dia visto pelos óculos.",
+			"en": "Google unveils the project from its Google[x] lab and publishes the concept video “One day...”, showing a day seen through the glasses."
+		},
+		"fonte": "https://money.cnn.com/2012/04/04/technology/google-project-glass/"
+	},
+	{
+		"id": "google-io",
+		"data": "2012-06-27",
+		"titulo": { "pt": "Salto de paraquedas no Google I/O", "en": "Skydiving at Google I/O" },
+		"texto": {
+			"pt": "Paraquedistas usando o Glass transmitem o salto ao vivo durante a conferência. A edição Explorer entra em pré-venda, por US$ 1.500, para os participantes da conferência nos Estados Unidos.",
+			"en": "Skydivers wearing Glass stream their jump live during the conference. The Explorer Edition goes on pre-order at US$1,500 for conference attendees in the United States."
+		},
+		"fonte": "https://www.slashgear.com/google-io-2012-project-glass-wrap-up-27236041"
+	},
+	{
+		"id": "como-e-usar",
+		"data": "2013-02-20",
+		"titulo": { "pt": "Vídeo “How it feels” e concurso", "en": "“How it feels” video and contest" },
+		"texto": {
+			"pt": "O Google divulga um vídeo gravado inteiramente com o dispositivo e abre o concurso #ifihadglass para escolher os primeiros usuários fora do grupo de desenvolvedores.",
+			"en": "Google releases a video shot entirely with the device and opens the #ifihadglass contest to pick the first users outside the developer group."
+		},
+		"fonte": "https://www.droid-life.com/2013/02/20/google-holding-contest-to-make-you-a-glass-explorer-how-would-you-use-glass/"
+	},
+	{
+		"id": "especificacoes",
+		"data": "2013-04-15",
+		"titulo": { "pt": "Especificações e primeiras entregas", "en": "Tech specs and first deliveries" },
+		"texto": {
+			"pt": "As especificações completas são publicadas (tela de 640 × 360, câmera de 5 MP, áudio por condução óssea) e o Google começa a entregar as primeiras unidades aos Explorers, em levas.",
+			"en": "The full tech specs are published (640 × 360 display, 5 MP camera, bone conduction audio) and Google starts shipping the first units to the Explorers, in waves."
+		},
+		"fonte": "https://liliputing.com/2013/04/google-ships-glass-explorer-units-announces-specs-api-other-details.html"
+	},
+	{
+		"id": "armacoes",
+		"data": "2014-01-28",
+		"titulo": { "pt": "Armações para lentes de grau", "en": "Frames for prescription lenses" },
+		"texto": {
+			"pt": "É anunciada a coleção de armações de titânio, que permite usar o Glass com lentes de grau.",
+			"en": "The titanium frame collection is announced, letting people use Glass with prescription lenses."
+		},
+		"fonte": "https://techcrunch.com/2014/01/28/google-glass-gets-prescription-options-with-four-titanium-frame-styles-and-shades"
+	},
+	{
+		"id": "venda-aberta",
+		"data": "2014-05-13",
+		"titulo": { "pt": "Venda aberta nos Estados Unidos", "en": "Open sale in the United States" },
+		"texto": {
+			"pt": "Depois de um dia de venda pública em abril, a edição Explorer passa a ser vendida a qualquer pessoa nos Estados Unidos, ainda por US$ 1.500.",
+			"en": "After a one-day public sale in April, the Explorer Edition becomes available to anyone in the United States, still at US$1,500."
+		},
+		"fonte": "https://www.droid-life.com/2014/05/13/now-anyone-in-the-us-can-purchase-google-glass-and-become-an-explorer/"
+	},
+	{
+		"id": "fim-explorer",
+		"data": "2015-01-19",
+		"titulo": { "pt": "Fim do programa Explorer", "en": "End of the Explorer program" },
+		"texto": {
+			"pt": "Último dia de venda da edição Explorer, cujo fim o Google anunciou em 15 de janeiro. O projeto sai do laboratório Google[x] e vira uma divisão própria, longe do público.",
+			"en": "Last day of sales for the Explorer Edition, whose end Google announced on January 15. The project leaves the Google[x] lab and becomes a unit of its own, away from the public."
+		},
+		"fonte": "https://thenextweb.com/news/bbc-google-abandon-glass-explorer-program-next-week"
+	},
+	{
+		"id": "enterprise",
+		"data": "2017-07-18",
+		"titulo": { "pt": "Glass Enterprise Edition", "en": "Glass Enterprise Edition" },
+		"texto": {
+			"pt": "O Glass volta em uma versão para empresas, vendida por parceiros e usada em fábricas, logística e saúde.",
+			"en": "Glass returns in a version for businesses, sold through partners and used in factories, logistics and healthcare."
+		},
+		"fonte": "https://9to5google.com/2017/07/18/google-glass-enterprise-edition/"
+	},
+	{
+		"id": "enterprise-2",
+		"data": "2019-05-20",
+		"titulo": { "pt": "Glass Enterprise Edition 2", "en": "Glass Enterprise Edition 2" },
+		"texto": {
+			"pt": "A segunda versão corporativa chega por US$ 999, com processador Snapdragon XR1, câmera de 8 MP, USB-C e Android 8.1.",
+			"en": "The second business version arrives at US$999, with a Snapdragon XR1 processor, an 8 MP camera, USB-C and Android 8.1."
+		},
+		"fonte": "https://9to5google.com/2019/05/20/glass-enterprise-edition-2-launch/"
+	},
+	{
+		"id": "descontinuado",
+		"data": "2023-03-15",
+		"titulo": { "pt": "O Glass é descontinuado", "en": "Glass is discontinued" },
+		"texto": {
+			"pt": "O Google encerra as vendas da Enterprise Edition e mantém o suporte até 15 de setembro de 2023, fechando a história do produto.",
+			"en": "Google stops selling the Enterprise Edition and keeps supporting it until September 15, 2023, closing the story of the product."
+		},
+		"fonte": "https://9to5google.com/2023/03/15/google-glass-enterprise-edition-discontinued/"
+	}
+]

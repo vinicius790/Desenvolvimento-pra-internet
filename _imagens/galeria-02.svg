@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+	<title>Pessoa sorrindo usando o Google Glass</title>
+	<rect width="800" height="600" fill="#dfe9f0"/>
+	<circle cx="400" cy="270" r="250" fill="#eef4f8"/>
+	<path d="M152.5 679 Q169 456.3 400 448 Q631 456.3 647.5 679 Z" fill="#455a64"/>
+	<rect x="353.8" y="382" width="92.4" height="99" fill="#e8b88f"/>
+	<circle cx="400" cy="250" r="165" fill="#e8b88f"/>
+	<path d="M235 236.8 A168.3 168.3 0 0 1 565 236.8 Q482.5 147.7 400 167.5 Q301 180.7 235 236.8 Z" fill="#3b2a20"/>
+	<circle cx="340.6" cy="273.1" r="12.4" fill="#2b2b2b"/>
+	<circle cx="459.4" cy="273.1" r="12.4" fill="#2b2b2b"/>
+	<path d="M340.6 332.5 Q400 388.6 459.4 332.5 Z" fill="#ffffff" stroke="#2b2b2b" stroke-width="8.3" stroke-linejoin="round"/>
+	<path d="M235 246.7 Q400 213.7 565 246.7" fill="none" stroke="#3a3a3a" stroke-width="13.2" stroke-linecap="round"/>
+	<rect x="492.4" y="228.6" width="82.5" height="33" rx="13.2" fill="#2b2b2b"/>
+	<rect x="429.7" y="236.8" width="69.3" height="56.1" rx="6.6" fill="#bfe3ff" fill-opacity=".8" stroke="#5c8fb5" stroke-width="5"/>
+</svg>

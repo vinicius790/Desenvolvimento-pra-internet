@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* Linha do tempo (linha-do-tempo.html e en/timeline.html). */
+
+.eventos {
+	position: relative;
+	display: flex;
+	gap: 0.5rem;
+	margin: 1rem 0;
+	padding: 1.5rem 0.25rem 0.75rem;
+	overflow-x: auto;
+}
+
+/* O fio da linha do tempo. */
+.eventos::before {
+	content: "";
+	position: absolute;
+	top: 0.75rem;
+	left: 0;
+	width: 100%;
+	min-width: 100%;
+	height: 2px;
+	background-color: var(--cinza-escuro);
+}
+
+.eventos [role="tab"] {
+	position: relative;
+	flex: 0 0 auto;
+	min-height: 2.75rem;
+	padding: 0 0.75rem;
+	border: 1px solid var(--cinza-escuro);
+	border-radius: 4px;
+	background-color: var(--cinza-claro);
+	color: var(--preto);
+	font: inherit;
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+
+/* O ponto de cada data sobre o fio. */
+.eventos [role="tab"]::before {
+	content: "";
+	position: absolute;
+	top: -1.1rem;
+	left: 50%;
+	width: 0.7rem;
+	height: 0.7rem;
+	border: 2px solid var(--branco);
+	border-radius: 50%;
+	background-color: var(--cinza-escuro);
+	transform: translateX(-50%);
+}
+
+.eventos [role="tab"]:hover {
+	background-color: var(--cinza-medio);
+}
+
+.eventos [role="tab"][aria-selected="true"] {
+	background-color: var(--cinza-escuro);
+	color: var(--branco);
+	font-weight: bold;
+}
+
+.eventos [role="tab"][aria-selected="true"]::before {
+	background-color: var(--vermelho);
+}
+
+.evento {
+	min-height: 11rem;
+	padding: 1rem;
+	border-left: 4px solid var(--cinza-escuro);
+	background-color: var(--fundo-suave);
+}
+
+.evento h3 {
+	margin: 0 0 0.5rem;
+	font-size: 1.2rem;
+}
+
+.evento p {
+	margin: 0;
+}
+
+.evento .data-evento {
+	margin-bottom: 0.25rem;
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: var(--cinza-texto);
+}
+
+.evento .posicao {
+	margin-top: 0.75rem;
+	font-size: 0.85rem;
+	color: var(--cinza-texto);
+}
+
+.acoes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin: 1rem 0;
+}
+
+.evento .fonte {
+	margin-top: 0.5rem;
+	font-size: 0.85rem;
+	color: var(--cinza-texto);
+}
+
+/* Filtro dinâmico de fases da linha do tempo */
+.filtro-fases {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 0.75rem 0 1rem;
+}
+
+.botao-fase {
+	padding: 0.35rem 0.75rem;
+	border: 1px solid var(--cinza-escuro);
+	border-radius: 4px;
+	background-color: var(--cinza-claro);
+	color: var(--preto);
+	font: inherit;
+	font-size: 0.85rem;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.botao-fase:hover {
+	background-color: var(--cinza-medio);
+}
+
+.botao-fase[aria-pressed="true"] {
+	background-color: var(--cinza-escuro);
+	color: var(--branco);
+	font-weight: bold;
+}
+
+/* Barra de progresso interativa e Auto-Tour */
+.progresso-timeline {
+	width: 100%;
+	height: 6px;
+	background: var(--cinza-medio, #d0d0d0);
+	border-radius: 3px;
+	overflow: hidden;
+	margin: 0.5rem 0 1rem;
+}
+
+.preenchimento-progresso {
+	height: 100%;
+	width: 10%;
+	background: var(--foco, #0056b3);
+	transition: width 0.3s ease;
+}
+
+.btn-auto-tour {
+	margin-left: 0.5rem;
+	font-weight: bold;
+}

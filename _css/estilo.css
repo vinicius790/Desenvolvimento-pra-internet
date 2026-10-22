@@ -1,0 +1,774 @@
+@charset "UTF-8";
+
+/*
+ * Estilo geral do site-exercício "Google Glass" (curso HTML5 e CSS3 do Curso em Vídeo).
+ * Mobile primeiro: a base atende telas estreitas e as media queries ampliam o layout.
+ */
+
+/* Fonte do logotipo: usa a Bubblegum Sans apenas se ela estiver instalada na máquina
+   (não há arquivo de fonte no repositório); senão vale a pilha de fontes do sistema. */
+@font-face {
+	font-family: "FonteLogo";
+	src: local("Bubblegum Sans"), local("BubblegumSans-Regular");
+}
+
+:root {
+	--branco: #ffffff;
+	--preto: #1a1a1a;
+	--cinza-claro: #dddddd;
+	--cinza-medio: #cecece;
+	--cinza-escuro: #606060;
+	/* Tons de texto com contraste AA sobre branco e sobre o cinza-claro. */
+	--cinza-texto: #595959;
+	--cinza-forte: #4d4d4d;
+	--vermelho: #c62828;
+	--erro: #a31515;
+	--foco: #0b57d0;
+	--fundo-suave: #f3f3f3;
+	--borda: #b5b5b5;
+	--borda-campo: #767676;
+	--fonte-texto: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	--fonte-logo: "FonteLogo", ui-rounded, "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+	--fonte-fina: "Titillium Web", "Segoe UI", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: var(--fonte-texto);
+	line-height: 1.5;
+	background-color: var(--cinza-claro);
+	color: var(--preto);
+}
+
+img,
+video,
+iframe {
+	max-width: 100%;
+}
+
+img,
+video {
+	height: auto;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+a {
+	color: var(--cinza-forte);
+}
+
+a:hover {
+	color: var(--preto);
+}
+
+:focus-visible {
+	outline: 3px solid var(--foco);
+	outline-offset: 2px;
+	box-shadow: 0 0 0 2px var(--branco);
+}
+
+:root[data-contraste="alto"] :focus-visible {
+	outline: 3px solid #ffff00;
+	outline-offset: 3px;
+	box-shadow: 0 0 0 3px #000000;
+}
+
+@media (forced-colors: active) {
+	:focus-visible {
+		outline: 3px solid Highlight;
+		outline-offset: 3px;
+	}
+}
+
+/* Texto só para leitores de tela. */
+.so-leitor {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* Link "pular para o conteúdo": aparece ao receber foco pelo teclado. */
+.pular {
+	position: absolute;
+	left: 0.5rem;
+	top: -4rem;
+	z-index: 10;
+	padding: 0.6rem 1rem;
+	background-color: var(--preto);
+	color: var(--branco);
+}
+
+.pular:focus {
+	top: 0.5rem;
+	color: var(--branco);
+}
+
+.botao {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	min-height: 2.75rem;
+	padding: 0 1.25rem;
+	border: 0;
+	border-radius: 4px;
+	background-color: var(--cinza-forte);
+	color: var(--branco);
+	font: inherit;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.botao:hover {
+	background-color: var(--preto);
+}
+
+.botao-secundario {
+	background-color: var(--branco);
+	color: var(--cinza-forte);
+	box-shadow: inset 0 0 0 2px var(--cinza-forte);
+}
+
+.botao-secundario:hover {
+	background-color: var(--cinza-claro);
+}
+
+/* ---------- Moldura da página ---------- */
+
+#interface {
+	max-width: 58rem;
+	margin: 0 auto;
+	padding: 0.75rem;
+	background-color: var(--branco);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Cabeçalho ---------- */
+
+#cabecalho {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	grid-template-areas:
+		"marca icone"
+		"menu menu"
+		"ferramentas ferramentas";
+	gap: 0.5rem 1rem;
+	align-items: center;
+	padding-bottom: 0.75rem;
+	border-bottom: 1px solid var(--cinza-escuro);
+}
+
+.marca {
+	grid-area: marca;
+}
+
+.nome-site {
+	margin: 0;
+	font-family: var(--fonte-logo);
+	font-size: 2rem;
+	font-weight: bold;
+	line-height: 1.1;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.nome-site a {
+	color: var(--cinza-escuro);
+	text-decoration: none;
+}
+
+.slogan {
+	margin: 0 0 0.35rem;
+	font-family: var(--fonte-fina);
+	font-size: 1.1rem;
+	color: var(--cinza-texto);
+}
+
+.logo {
+	display: block;
+	width: 8rem;
+}
+
+#icone {
+	grid-area: icone;
+	width: 6rem;
+}
+
+/* ---------- Menu ---------- */
+
+#menu {
+	grid-area: menu;
+}
+
+#menu ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-transform: uppercase;
+}
+
+#menu a {
+	display: block;
+	padding: 0.7rem 0.75rem;
+	background-color: var(--cinza-claro);
+	color: var(--preto);
+	font-size: 0.9rem;
+	text-decoration: none;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+#menu a:hover,
+#menu a:focus-visible,
+#menu a[aria-current="page"] {
+	background-color: var(--cinza-escuro);
+	color: var(--branco);
+}
+
+/* ---------- Ferramentas do cabeçalho: busca, tema e idioma ---------- */
+
+.ferramentas {
+	grid-area: ferramentas;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.busca {
+	display: flex;
+	flex: 1 1 12rem;
+	gap: 0.25rem;
+	max-width: 20rem;
+}
+
+.busca input,
+.busca-principal input {
+	flex: 1;
+	min-width: 0;
+	min-height: 2.75rem;
+	padding: 0 0.6rem;
+	border: 1px solid var(--borda-campo);
+	border-radius: 4px;
+	background-color: var(--branco);
+	color: inherit;
+	font: inherit;
+}
+
+.botao-icone,
+.idioma {
+	display: inline-grid;
+	place-items: center;
+	min-width: 2.75rem;
+	min-height: 2.75rem;
+	padding: 0 0.6rem;
+	border: 1px solid var(--cinza-escuro);
+	border-radius: 4px;
+	background-color: var(--cinza-claro);
+	color: var(--preto);
+	font: inherit;
+	font-size: 0.85rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.botao-icone:hover,
+.idioma:hover {
+	background-color: var(--cinza-medio);
+	color: var(--preto);
+}
+
+/* Ícones desenhados com máscara: acompanham a cor do texto nos dois temas. */
+.icone-lupa,
+.icone-tema {
+	display: block;
+	width: 1.25rem;
+	height: 1.25rem;
+	background-color: currentColor;
+	-webkit-mask-image: url("../_imagens/lupa.svg");
+	mask-image: url("../_imagens/lupa.svg");
+	-webkit-mask-position: center;
+	mask-position: center;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+
+.icone-tema {
+	-webkit-mask-image: url("../_imagens/lua.svg");
+	mask-image: url("../_imagens/lua.svg");
+}
+
+/* O botão de tema só aparece quando tema.js rodou (ele marca data-tema no <html>). */
+#alternar-tema {
+	display: none;
+}
+
+#alternar-contraste {
+	display: none;
+}
+
+:root[data-contraste] #alternar-contraste {
+	display: inline-grid;
+}
+
+#alternar-contraste[aria-pressed="true"] {
+	background-color: var(--cinza-escuro);
+	color: var(--branco);
+}
+
+.icone-contraste::before {
+	content: "Aa";
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+#alternar-fonte {
+	display: none;
+}
+
+:root[data-fonte] #alternar-fonte {
+	display: inline-grid;
+}
+
+#alternar-fonte[aria-pressed="true"] {
+	background-color: var(--cinza-escuro);
+	color: var(--branco);
+}
+
+.icone-fonte {
+	font-size: 0.95rem;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+}
+
+:root[data-fonte="grande"] {
+	font-size: 118%;
+}
+
+:root[data-fonte="grande"] body {
+	line-height: 1.6;
+}
+:root[data-tema] #alternar-tema {
+	display: inline-grid;
+}
+
+/* Tabelas largas rolam dentro da própria caixa, sem estourar a página. */
+.rolagem {
+	overflow-x: auto;
+}
+
+.dica {
+	display: block;
+	font-size: 0.85rem;
+	color: var(--cinza-texto);
+}
+
+/* ---------- Conteúdo ---------- */
+
+#conteudo {
+	display: grid;
+	gap: 1.5rem;
+	padding: 1rem 0;
+}
+
+/* Deixa tabelas e listas largas rolarem dentro da coluna em vez de alargar a página. */
+#conteudo > * {
+	min-width: 0;
+}
+
+.trilha {
+	margin: 0 0 0.25rem;
+	font-size: 0.85rem;
+	color: var(--cinza-texto);
+}
+
+#cabecalho-artigo h1 {
+	margin: 0;
+	font-family: var(--fonte-logo);
+	font-size: 1.6rem;
+	line-height: 1.2;
+	color: var(--cinza-escuro);
+}
+
+.autor {
+	margin: 0;
+	font-weight: bold;
+	color: var(--cinza-texto);
+}
+
+.data {
+	margin: 0.25rem 0 1rem;
+	font-size: 0.85rem;
+	text-align: right;
+	color: var(--cinza-texto);
+}
+
+#noticia-principal h2 {
+	margin: 1.25rem 0 0.75rem;
+	padding: 0.3rem 0.6rem;
+	background-color: var(--cinza-claro);
+	font-size: 1rem;
+	color: var(--cinza-forte);
+}
+
+#noticia-principal > p,
+#lateral > p {
+	text-indent: 2em;
+	hyphens: auto;
+}
+
+.nota {
+	margin: 0 0 1rem;
+	padding: 0.75rem 1rem;
+	border-left: 4px solid var(--cinza-escuro);
+	background-color: var(--fundo-suave);
+	font-size: 0.95rem;
+}
+
+.nota p {
+	margin: 0;
+}
+
+/* Imagem com legenda (a legenda fica sempre visível, não só no hover). */
+.foto-legenda {
+	position: relative;
+	margin: 1rem 0;
+	border: 8px solid var(--branco);
+	box-shadow: 1px 1px 4px #000000;
+}
+
+.foto-legenda img {
+	display: block;
+	width: 100%;
+}
+
+.foto-legenda figcaption {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0.5rem 0.75rem;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #ffffff;
+}
+
+.foto-legenda figcaption strong {
+	display: block;
+}
+
+/* Tabela técnica */
+#tabelaspec {
+	margin: 1rem auto;
+	border: 1px solid var(--cinza-escuro);
+	border-spacing: 0;
+}
+
+#tabelaspec th,
+#tabelaspec td {
+	padding: 0.6rem;
+	border: 1px solid var(--cinza-escuro);
+	text-align: center;
+	vertical-align: middle;
+}
+
+#tabelaspec th {
+	background-color: var(--cinza-escuro);
+	color: var(--branco);
+	vertical-align: top;
+}
+
+#tabelaspec td {
+	background-color: var(--cinza-medio);
+}
+
+#tabelaspec caption {
+	padding-bottom: 0.25rem;
+	font-size: 1.05rem;
+	font-weight: bold;
+	color: var(--cinza-texto);
+}
+
+#tabelaspec caption span {
+	display: block;
+	font-size: 0.75rem;
+	font-weight: normal;
+	text-align: right;
+	color: var(--preto);
+}
+
+/* Vídeos */
+.video {
+	margin: 1rem 0;
+}
+
+.video video {
+	display: block;
+	width: 100%;
+	background-color: #000000;
+}
+
+.video figcaption {
+	margin-top: 0.35rem;
+	font-size: 0.85rem;
+	color: var(--cinza-forte);
+}
+
+/* ---------- Lateral ---------- */
+
+#lateral {
+	padding: 0.75rem;
+	background-color: var(--cinza-claro);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#lateral h2 {
+	margin: 0 0 0.5rem;
+	font-family: var(--fonte-logo);
+	font-size: 1.6rem;
+	color: var(--cinza-forte);
+}
+
+#lateral h3 {
+	margin: 1rem 0 0.5rem;
+	padding: 0.35rem 0.5rem;
+	background-color: var(--cinza-escuro);
+	font-size: 1.05rem;
+	color: var(--branco);
+}
+
+#lateral .video {
+	margin: 0.5rem 0 1rem;
+}
+
+/* ---------- Rodapé ---------- */
+
+#rodape {
+	padding-top: 0.75rem;
+	border-top: 1px solid var(--cinza-escuro);
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+#rodape p {
+	margin: 0 0 0.5rem;
+}
+
+#rodape .credito {
+	font-size: 0.8rem;
+	color: var(--cinza-texto);
+}
+
+/* ---------- Telas largas ---------- */
+
+@media (min-width: 48rem) {
+	#interface {
+		padding: 1rem 1.25rem;
+	}
+
+	#cabecalho {
+		grid-template-columns: auto minmax(0, 1fr);
+		grid-template-areas:
+			"marca menu"
+			"marca ferramentas"
+			"marca icone";
+		align-items: start;
+	}
+
+	#menu ul,
+	.ferramentas {
+		justify-content: flex-end;
+	}
+
+	#icone {
+		justify-self: end;
+		width: 7.5rem;
+	}
+
+	.nome-site {
+		font-size: 2.5rem;
+	}
+
+	#conteudo.com-lateral {
+		grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+		align-items: start;
+	}
+
+	#conteudo.com-lateral #noticia-principal {
+		padding-right: 1rem;
+		border-right: 1px solid var(--cinza-escuro);
+	}
+}
+
+/* ---------- Preferência por menos movimento ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* ---------- Modo escuro ----------
+   Vale quando o visitante escolheu "escuro" (tema.js grava data-tema no <html>) ou, sem
+   escolha salva nem JavaScript, quando o sistema pede esquema escuro. As variáveis trocam
+   de papel aos pares (fundo x texto), então o contraste AA se mantém. */
+
+:root[data-tema="escuro"] {
+	color-scheme: dark;
+	--branco: #1e1e1e;
+	--preto: #ececec;
+	--cinza-claro: #2c2c2c;
+	--cinza-medio: #3a3a3a;
+	--cinza-escuro: #b3b3b3;
+	--cinza-texto: #b8b8b8;
+	--cinza-forte: #cfcfcf;
+	--vermelho: #ef5350;
+	--erro: #ff8a80;
+	--foco: #8ab4f8;
+	--fundo-suave: #262626;
+	--borda: #555555;
+	--borda-campo: #8a8a8a;
+}
+
+:root[data-tema="escuro"] .icone-tema {
+	-webkit-mask-image: url("../_imagens/sol.svg");
+	mask-image: url("../_imagens/sol.svg");
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-tema]) {
+		color-scheme: dark;
+		--branco: #1e1e1e;
+		--preto: #ececec;
+		--cinza-claro: #2c2c2c;
+		--cinza-medio: #3a3a3a;
+		--cinza-escuro: #b3b3b3;
+		--cinza-texto: #b8b8b8;
+		--cinza-forte: #cfcfcf;
+		--vermelho: #ef5350;
+		--erro: #ff8a80;
+		--foco: #8ab4f8;
+		--fundo-suave: #262626;
+		--borda: #555555;
+		--borda-campo: #8a8a8a;
+	}
+}
+
+/* ---------- Alto contraste ----------
+   Preto e branco puros elevam a razão de contraste do texto a 21:1. O modo segue o
+   tema claro/escuro escolhido; sem JavaScript, respeita prefers-contrast do sistema. */
+:root[data-contraste="alto"] {
+	color-scheme: light;
+	--branco: #ffffff;
+	--preto: #000000;
+	--cinza-claro: #ffffff;
+	--cinza-medio: #ffffff;
+	--cinza-escuro: #000000;
+	--cinza-texto: #000000;
+	--cinza-forte: #000000;
+	--vermelho: #000000;
+	--erro: #000000;
+	--foco: #000000;
+	--fundo-suave: #ffffff;
+	--borda: #000000;
+	--borda-campo: #000000;
+}
+
+:root[data-tema="escuro"][data-contraste="alto"] {
+	color-scheme: dark;
+	--branco: #000000;
+	--preto: #ffffff;
+	--cinza-claro: #000000;
+	--cinza-medio: #000000;
+	--cinza-escuro: #ffffff;
+	--cinza-texto: #ffffff;
+	--cinza-forte: #ffffff;
+	--vermelho: #ffffff;
+	--erro: #ffffff;
+	--foco: #ffffff;
+	--fundo-suave: #000000;
+	--borda: #ffffff;
+	--borda-campo: #ffffff;
+}
+
+@media (prefers-contrast: more) {
+	:root:not([data-contraste]) {
+		color-scheme: light;
+		--branco: #ffffff;
+		--preto: #000000;
+		--cinza-claro: #ffffff;
+		--cinza-medio: #ffffff;
+		--cinza-escuro: #000000;
+		--cinza-texto: #000000;
+		--cinza-forte: #000000;
+		--vermelho: #000000;
+		--erro: #000000;
+		--foco: #000000;
+		--fundo-suave: #ffffff;
+		--borda: #000000;
+		--borda-campo: #000000;
+	}
+
+	:root[data-tema="escuro"]:not([data-contraste]) {
+		color-scheme: dark;
+		--branco: #000000;
+		--preto: #ffffff;
+		--cinza-claro: #000000;
+		--cinza-medio: #000000;
+		--cinza-escuro: #ffffff;
+		--cinza-texto: #ffffff;
+		--cinza-forte: #ffffff;
+		--vermelho: #ffffff;
+		--erro: #ffffff;
+		--foco: #ffffff;
+		--fundo-suave: #000000;
+		--borda: #ffffff;
+		--borda-campo: #ffffff;
+	}
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+	:root:not([data-tema]):not([data-contraste]) {
+		color-scheme: dark;
+		--branco: #000000;
+		--preto: #ffffff;
+		--cinza-claro: #000000;
+		--cinza-medio: #000000;
+		--cinza-escuro: #ffffff;
+		--cinza-texto: #ffffff;
+		--cinza-forte: #ffffff;
+		--vermelho: #ffffff;
+		--erro: #ffffff;
+		--foco: #ffffff;
+		--fundo-suave: #000000;
+		--borda: #ffffff;
+		--borda-campo: #ffffff;
+	}
+}

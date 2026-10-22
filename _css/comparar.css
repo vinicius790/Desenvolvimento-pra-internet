@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+/* Comparador de modelos (comparar.html e en/compare.html). */
+
+#selecao {
+	margin: 0 0 1rem;
+	padding: 0.75rem 1rem;
+	border: 1px solid var(--borda);
+}
+
+#selecao legend {
+	padding: 0 0.35rem;
+	font-weight: bold;
+	color: var(--cinza-texto);
+}
+
+#opcoes-modelos {
+	display: grid;
+	gap: 0.25rem 1rem;
+	margin-top: 0.5rem;
+}
+
+.opcao {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	min-height: 2.75rem;
+	margin: 0;
+}
+
+.opcao input {
+	width: 1.25rem;
+	height: 1.25rem;
+	margin: 0;
+}
+
+#aviso-comparador {
+	min-height: 1.5rem;
+	margin: 0.5rem 0;
+	font-weight: bold;
+}
+
+#tabela-comparacao {
+	width: 100%;
+	margin: 0.5rem 0 1rem;
+	border-collapse: collapse;
+}
+
+#tabela-comparacao caption {
+	padding-bottom: 0.35rem;
+	font-weight: bold;
+	text-align: left;
+	color: var(--cinza-texto);
+}
+
+#tabela-comparacao th,
+#tabela-comparacao td {
+	padding: 0.5rem 0.6rem;
+	border: 1px solid var(--cinza-escuro);
+	text-align: left;
+	vertical-align: top;
+}
+
+#tabela-comparacao thead th {
+	background-color: var(--cinza-escuro);
+	color: var(--branco);
+}
+
+#tabela-comparacao tbody th {
+	background-color: var(--cinza-claro);
+	white-space: nowrap;
+}
+
+/* Diferença: barra lateral e marcador, além do texto para leitores de tela
+   (a informação não depende só da cor). */
+#tabela-comparacao tr.diferente th {
+	border-left: 6px solid var(--vermelho);
+}
+
+#tabela-comparacao tr.diferente td {
+	background-color: var(--fundo-suave);
+	font-weight: bold;
+}
+
+.marca-dif {
+	margin-left: 0.35rem;
+	color: var(--vermelho);
+}
+
+#tabela-comparacao.so-diferencas tbody tr:not(.diferente) {
+	display: none;
+}
+
+@media (min-width: 36rem) {
+	#opcoes-modelos {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+/* Fontes das especificações, na nota abaixo da tabela. */
+.fontes {
+	margin: 0.5rem 0 0;
+	padding-left: 1.25rem;
+	font-size: 0.85rem;
+}
+
+/* Filtros rápidos e busca interativa de especificações */
+.atalhos-comparacao {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 0.75rem 0 0.5rem;
+}
+
+.botao-atalho {
+	padding: 0.35rem 0.75rem;
+	border: 1px solid var(--cinza-escuro);
+	border-radius: 4px;
+	background-color: var(--cinza-claro);
+	color: var(--preto);
+	font: inherit;
+	font-size: 0.85rem;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.botao-atalho:hover {
+	background-color: var(--cinza-medio);
+}
+
+.filtro-specs-container {
+	margin: 0.75rem 0;
+}
+
+.filtro-specs-container input {
+	width: 100%;
+	max-width: 26rem;
+	padding: 0.5rem 0.75rem;
+	border: 1px solid var(--borda-campo);
+	border-radius: 4px;
+	background-color: var(--branco);
+	color: var(--preto);
+	font: inherit;
+	font-size: 0.9rem;
+}
+
+/* Gráficos Comparativos & Evolução (2013 - 2024) */
+.secao-graficos {
+	margin: 2.5rem 0 1.5rem;
+	padding: 1.5rem;
+	border: 2px solid var(--cinza-escuro);
+	border-radius: 8px;
+	background-color: var(--branco);
+}
+
+.seletor-metricas {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1.25rem 0;
+}
+
+.btn-metrica {
+	padding: 0.45rem 0.85rem;
+	border: 1px solid var(--cinza-escuro);
+	border-radius: 20px;
+	background-color: var(--fundo-suave);
+	color: var(--preto);
+	font: inherit;
+	font-size: 0.85rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.btn-metrica:hover {
+	background-color: var(--cinza-claro);
+}
+
+.btn-metrica.ativo {
+	background-color: var(--foco);
+	color: var(--branco);
+	border-color: var(--foco);
+}
+
+.container-grafico {
+	width: 100%;
+	overflow-x: auto;
+	padding: 0.5rem 0;
+	border: 1px solid var(--borda);
+	border-radius: 6px;
+	background-color: var(--fundo-suave);
+}
+
+#canvas-grafico-comparativo {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.painel-metricas {
+	margin-top: 1.25rem;
+	padding: 1rem;
+	background-color: var(--fundo-suave);
+	border-radius: 6px;
+	border: 1px solid var(--borda);
+}
+
+.resumo-analise {
+	font-size: 0.95rem;
+	line-height: 1.5;
+	color: var(--preto);
+	margin-bottom: 1rem;
+}
+
+.grid-metricas-detalhe {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0.75rem;
+}
+
+@media (min-width: 44rem) {
+	.grid-metricas-detalhe {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.card-item-metrica {
+	padding: 0.75rem 1rem;
+	background-color: var(--branco);
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-item-metrica h4 {
+	margin: 0 0 0.35rem;
+	font-size: 0.95rem;
+	color: var(--preto);
+}
+
+.card-item-metrica p {
+	margin: 0 0 0.35rem;
+	font-size: 0.85rem;
+}
+
+.destaque-hardware {
+	font-style: italic;
+	color: var(--cinza-texto);
+}
+
+.cards-evolucao {
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid var(--borda);
+}
+
+.titulo-marcos {
+	margin: 0 0 1rem;
+	font-size: 1.15rem;
+	color: var(--preto);
+}
+
+.grid-marcos {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+}
+
+@media (min-width: 50rem) {
+	.grid-marcos {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.card-marco-historico {
+	padding: 1rem;
+	background-color: var(--fundo-suave);
+	border-radius: 6px;
+	border: 1px solid var(--borda);
+	position: relative;
+}
+
+.badge-ano {
+	display: inline-block;
+	padding: 0.2rem 0.5rem;
+	background-color: var(--cinza-escuro);
+	color: var(--branco);
+	border-radius: 3px;
+	font-size: 0.75rem;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+.card-marco-historico h3 {
+	margin: 0 0 0.5rem;
+	font-size: 1rem;
+	color: var(--preto);
+}
+
+.specs-resumo-marco {
+	margin: 0 0 0.75rem;
+	padding-left: 1.25rem;
+	font-size: 0.85rem;
+}
+
+.marco-caso-uso {
+	margin: 0;
+	font-size: 0.85rem;
+	color: var(--cinza-forte);
+}

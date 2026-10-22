@@ -1,146 +1,225 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Tudo sobre Google Glass</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="_css/estilo.css">
-        <link rel="stylesheet" type="text/css" href="_css/form.css">
-    </head>
-    <script language="javascript" src="_javascript/funcoes.js"></script>
-    <script>
-        function calc_total(){
-            var qtd = parseInt(document.getElementById('cQtd').value);
-            tot = qtd * 1500;
-            document.getElementById('cTot').value = tot;
-        }
-    </script>
-    <body>
-        <div id="interface">
-            <header id="cabecalho">
-                <hgroup>
-                    <h1>Google Glass</h1>
-                    <h2>A revolução do Google está chegando</h2>
-                </hgroup>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fale conosco | Tudo sobre Google Glass</title>
+	<meta name="description" content="Formulário de contato e de pedido do Google Glass, com validação e resumo exibido na própria página, sem envio de dados.">
+	<link rel="alternate" hreflang="pt-BR" href="fale-conosco.html">
+	<link rel="alternate" hreflang="en" href="en/contact.html">
+	<link rel="alternate" hreflang="x-default" href="fale-conosco.html">
+	<link rel="icon" href="_imagens/glass-oculos.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="_css/estilo.css">
+	<link rel="stylesheet" href="_css/form.css">
+	<script src="_javascript/tema.js"></script>
+	<script src="_javascript/funcoes.js" defer></script>
+	<script src="_javascript/pedido.js" defer></script>
+</head>
+<body>
+	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+	<div id="interface">
+		<header id="cabecalho">
+			<div class="marca">
+				<p class="nome-site"><a href="index.html">Google Glass</a></p>
+				<p class="slogan">A revolução do Google está chegando</p>
+				<img class="logo" src="_imagens/glass-logo.svg" alt="" width="160" height="40">
+			</div>
+			<nav id="menu" aria-label="Menu principal">
+				<ul>
+					<li><a href="index.html" data-icone="_imagens/home.svg">Home</a></li>
+					<li><a href="specs.html" data-icone="_imagens/especificacoes.svg">Especificações</a></li>
+					<li><a href="comparar.html" data-icone="_imagens/comparar.svg">Comparar</a></li>
+					<li><a href="linha-do-tempo.html" data-icone="_imagens/linha-do-tempo.svg">Linha do tempo</a></li>
+					<li><a href="fotos.html" data-icone="_imagens/fotos.svg">Fotos</a></li>
+					<li><a href="multimidia.html" data-icone="_imagens/multimidia.svg">Multimídia</a></li>
+					<li><a href="fale-conosco.html" data-icone="_imagens/contato.svg" aria-current="page">Fale conosco</a></li>
+				</ul>
+			</nav>
+			<div class="ferramentas">
+				<form class="busca" role="search" action="busca.html">
+					<label class="so-leitor" for="busca-topo">Buscar no site</label>
+					<input type="search" id="busca-topo" name="q" placeholder="Buscar no site" minlength="2" required>
+					<button type="submit" class="botao-icone"><span class="icone-lupa" aria-hidden="true"></span><span class="so-leitor">Buscar</span></button>
+				</form>
+				<button type="button" class="botao-icone" id="alternar-tema" aria-pressed="false"><span class="icone-tema" aria-hidden="true"></span><span class="so-leitor">Modo escuro</span></button>
+				<button type="button" class="botao-icone" id="alternar-contraste" aria-label="Alto contraste" aria-pressed="false"><span class="icone-contraste" aria-hidden="true"></span></button>
+				<button type="button" class="botao-icone" id="alternar-fonte" aria-label="Aumentar tamanho da fonte (A+)" aria-pressed="false" title="Alternar tamanho da fonte (A+ / A-)"><span class="icone-fonte" aria-hidden="true">A+</span><span class="so-leitor">Aumentar tamanho da fonte</span></button>
+				<a class="idioma" href="en/contact.html" hreflang="en" lang="en">English</a>
+			</div>
+			<img id="icone" src="_imagens/contato.svg" alt="" width="120" height="90">
+		</header>
 
-                <img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+		<main id="conteudo">
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<p class="trilha">Fale Conosco &rsaquo; Contato</p>
+					<h1>Formulário de Contato</h1>
+					<p class="autor">por Pedro Henrique</p>
+					<p class="data">Atualizado em <time datetime="2017-12-11">11 de dezembro de 2017</time></p>
+				</header>
 
-                <nav id="menu">
-                    <h1>Menu Principal</h1>
-                    <ul>
-                        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
-                        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
-                        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
-                        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
-                        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <section id="corp-full">
-                <article id="noticia-principal">
-                    <header id="cabecalho-artigo">
-                        <hgroup>
-                            <h3>Fale Conosco > Contato</h3>
-                            <h1>Formulário de Contato</h1>
-                            <h2>por Pedro Henrique</h2>
-                            <h3 class="direita">Atualizado em 11/Dezembro/2017</h3>
-                        </hgroup>
-                    </header>
-                    <form method="post" action="mailto:pedro.ads@outlook.com" id="fContato" oninput="calc_total();">
-                        <fieldset id="usuario"><legend>Identificação do Usuário</legend>
-                                <p><label for="cNome">Nome:</label>
-                                <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"></p>
-                                <p><label for="cSenha">Senha:</label>
-                                <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 Dígitos"></p>
-                                <p><label for="cEmail">E-mail:</label>
-                                <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40"></p>
-                                <fieldset id="sexo"><legend>Sexo:</legend>
-                                    <input type="radio" name="tSexo" id="cMasc" checked><label for="cMasc">Masculino</label><br>
-                                    <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label>
-                                </fieldset>
-                                <p><label for="cNasc">Data de Nascimento: </label><input type="date" name="tNasc" id="cNasc"></p>
-                        </fieldset>
+				<p class="intro-form">Use o formulário para mandar uma mensagem ou registrar interesse em um Google Glass. Os campos marcados com <span aria-hidden="true">*</span><span class="so-leitor">asterisco</span> são obrigatórios.</p>
+				<p class="intro-form">Este formulário é um exercício: nada é enviado a servidor nenhum. Ao clicar em Enviar, o resumo aparece nesta própria página.</p>
 
-                        <fieldset id="endereco"><legend>Endereço do Usuário</legend>
-                                <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav,..."></p>
-                                <p><label for="cNum">Número: </label><input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
-                                <p><label for="cEst">Estado:</label>
-                                <select name="tEst" id="cEst">
-                                    <optgroup label="Região Norte">
-                                        <option value="AC">Acre</option>
-                                        <option value="AP">Amapá</option>
-                                        <option value="AM">Amazonas</option>
-                                        <option value="PA">Pará</option>
-                                        <option value="RO">Rondônia</option>
-                                        <option value="RR">Roraima</option>
-                                        <option value="TO">Tocantis</option>
-                                    </optgroup>
+				<!-- method="dialog" fora de um <dialog> não envia nada, nem com o JavaScript desligado. -->
+				<form id="fContato" method="dialog" data-preco="1500">
+					<fieldset id="usuario">
+						<legend>Identificação do Usuário</legend>
+						<p class="campo">
+							<label for="cNome">Nome: <span aria-hidden="true">*</span></label>
+							<input type="text" name="tNome" id="cNome" maxlength="60" placeholder="Nome completo" autocomplete="name" required>
+						</p>
+						<p class="campo">
+							<label for="cEmail">E-mail: <span aria-hidden="true">*</span></label>
+							<input type="email" name="tEmail" id="cEmail" maxlength="80" placeholder="nome@exemplo.com" autocomplete="email" required>
+						</p>
+						<fieldset id="sexo">
+							<legend>Sexo:</legend>
+							<p class="opcao">
+								<input type="radio" name="tSexo" id="cMasc" value="Masculino">
+								<label for="cMasc">Masculino</label>
+							</p>
+							<p class="opcao">
+								<input type="radio" name="tSexo" id="cFem" value="Feminino">
+								<label for="cFem">Feminino</label>
+							</p>
+							<p class="opcao">
+								<input type="radio" name="tSexo" id="cNaoInf" value="Prefiro não informar">
+								<label for="cNaoInf">Prefiro não informar</label>
+							</p>
+						</fieldset>
+						<p class="campo">
+							<label for="cNasc">Data de nascimento:</label>
+							<input type="date" name="tNasc" id="cNasc" autocomplete="bday">
+						</p>
+					</fieldset>
 
-                                    <optgroup label="Região Nordeste">
-                                        <option value="AL">Alagoas</option>             
-                                        <option value="BA">Bahia</option>
-                                        <option value="CE">Ceará</option>
-                                        <option value="MA">Maranhão</option>
-                                        <option value="RN">Rio Grande do Norte</option>
-                                        <option value="PB">Paraíba</option>
-                                        <option value="PE">Pernambuco</option>
-                                        <option value="PI">Piauí</option>
-                                        <option value="SE">Sergipe</option>
-                                    </optgroup>
+					<fieldset id="endereco">
+						<legend>Endereço do Usuário</legend>
+						<p class="campo">
+							<label for="cRua">Logradouro:</label>
+							<input type="text" name="tRua" id="cRua" maxlength="80" placeholder="Rua, Av., Trav., ..." autocomplete="address-line1">
+						</p>
+						<p class="campo">
+							<label for="cNum">Número:</label>
+							<input type="text" name="tNum" id="cNum" maxlength="6" inputmode="numeric" autocomplete="off">
+						</p>
+						<p class="campo">
+							<label for="cEst">Estado:</label>
+							<select name="tEst" id="cEst" autocomplete="address-level1">
+								<option value="">Selecione o estado</option>
+								<optgroup label="Região Norte">
+									<option value="AC">Acre</option>
+									<option value="AP">Amapá</option>
+									<option value="AM">Amazonas</option>
+									<option value="PA">Pará</option>
+									<option value="RO">Rondônia</option>
+									<option value="RR">Roraima</option>
+									<option value="TO">Tocantins</option>
+								</optgroup>
+								<optgroup label="Região Nordeste">
+									<option value="AL">Alagoas</option>
+									<option value="BA">Bahia</option>
+									<option value="CE">Ceará</option>
+									<option value="MA">Maranhão</option>
+									<option value="PB">Paraíba</option>
+									<option value="PE">Pernambuco</option>
+									<option value="PI">Piauí</option>
+									<option value="RN">Rio Grande do Norte</option>
+									<option value="SE">Sergipe</option>
+								</optgroup>
+								<optgroup label="Região Centro-Oeste">
+									<option value="DF">Distrito Federal</option>
+									<option value="GO">Goiás</option>
+									<option value="MT">Mato Grosso</option>
+									<option value="MS">Mato Grosso do Sul</option>
+								</optgroup>
+								<optgroup label="Região Sudeste">
+									<option value="ES">Espírito Santo</option>
+									<option value="MG">Minas Gerais</option>
+									<option value="RJ">Rio de Janeiro</option>
+									<option value="SP">São Paulo</option>
+								</optgroup>
+								<optgroup label="Região Sul">
+									<option value="PR">Paraná</option>
+									<option value="RS">Rio Grande do Sul</option>
+									<option value="SC">Santa Catarina</option>
+								</optgroup>
+							</select>
+						</p>
+						<p class="campo">
+							<label for="cCid">Cidade:</label>
+							<input type="text" name="tCid" id="cCid" maxlength="40" placeholder="Sua cidade" list="cidades" autocomplete="address-level2">
+						</p>
+						<datalist id="cidades">
+							<option value="Rio de Janeiro"></option>
+							<option value="Nova Iguaçu"></option>
+							<option value="Niterói"></option>
+							<option value="Belford Roxo"></option>
+						</datalist>
+					</fieldset>
 
-                                    <optgroup label="Região Centro-Oeste">
-                                        <option value="GO">Goiás</option>               
-                                        <option value="MT">Mato Grosso</option>
-                                        <option value="MS">Mato Grosso do Sul</option>
-                                    </optgroup>
+					<fieldset id="mensagem">
+						<legend>Mensagem do Usuário</legend>
+						<p class="campo">
+							<span class="rotulo"><label for="cUrg">Grau de urgência:</label> <output id="vUrg" for="cUrg">4</output> de 10</span>
+							<span class="faixa">
+								<span aria-hidden="true">Mín</span>
+								<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2" value="4">
+								<span aria-hidden="true">Máx</span>
+							</span>
+						</p>
+						<p class="campo">
+							<label for="cMsg">Mensagem:</label>
+							<textarea name="tMsg" id="cMsg" rows="5" maxlength="500" placeholder="Deixe aqui sua mensagem" aria-describedby="dica-msg"></textarea>
+							<span class="dica" id="dica-msg">Obrigatória se você não for pedir um Google Glass.</span>
+						</p>
+					</fieldset>
 
-                                    <optgroup label="Região Sudeste">
-                                        <option value="ES">Espírito Santo</option>
-                                        <option value="MG">Minas Gerais</option>
-                                        <option value="RJ">Rio de Janeiro</option>
-                                        <option value="SP">São Paulo</option>           
-                                    </optgroup>
+					<fieldset id="pedido">
+						<legend>Quero um Google Glass</legend>
+						<p class="opcao">
+							<input type="checkbox" name="tPed" id="cPed" checked>
+							<label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label>
+						</p>
+						<p class="campo">
+							<label for="cCor">Cor:</label>
+							<input type="color" name="tCor" id="cCor" value="#0000ff">
+						</p>
+						<p class="campo">
+							<label for="cQtd">Quantidade:</label>
+							<input type="number" name="tQtd" id="cQtd" min="1" max="5" value="1" required aria-describedby="dica-qtd">
+							<span class="dica" id="dica-qtd">De 1 a 5 unidades, a US$ 1.500,00 cada.</span>
+						</p>
+						<p class="total">Preço total: <output id="cTot" for="cQtd cPed">US$ 1.500,00</output></p>
+					</fieldset>
 
-                                    <optgroup label="Região Sul">
-                                        <option value="PR">Paraná</option>              
-                                        <option value="RS">Rio Grande do Sul</option>
-                                        <option value="SC">Santa Catarina</option>
-                                    </optgroup>
-                                </select></p>
-                                <p><label for="cCid">Cidade:</label> 
-                                <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
-                                <datalist id="cidades">
-                                    <option value="Rio de Janeiro"></option>
-                                    <option value="Nova Iguaçu"></option>
-                                    <option value="Niterói"></option>
-                                    <option value="Belford Roxo"></option>
-                                </datalist>
-                        </fieldset>
+					<p id="aviso-form" role="alert" aria-live="polite"></p>
+					<noscript>
+						<p class="nota">O resumo do contato e o cálculo do total dependem de JavaScript, que está desativado neste navegador. Nada é enviado.</p>
+					</noscript>
+					<p class="acoes">
+						<button type="submit" class="botao"><img src="_imagens/botao-enviar.svg" alt="" width="24" height="24"> Enviar</button>
+						<button type="reset" class="botao botao-secundario">Limpar</button>
+					</p>
+				</form>
 
-                        <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
-                                <p><label for="cUrg">Grau de Urgência:</label> Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</p>
-                                <p><label for="cMsg">Mensagem:</label> 
-                                <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
-                        </fieldset>
+				<section id="resumo" tabindex="-1" aria-labelledby="resumo-titulo" hidden>
+					<h2 id="resumo-titulo">Resumo do seu contato</h2>
+					<p>Confira os dados abaixo. Nada foi enviado: eles existem apenas nesta página e somem quando ela é recarregada.</p>
+					<dl id="resumo-lista"></dl>
+				</section>
+			</article>
+		</main>
 
-                        <fieldset id="pedido"><legend>Quero um Google Glass</legend>
-                                <p><input type="checkbox" name="tPed" id="cPed" checked>
-                                    <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
-                                <p><label for="cCor">Cor:</label> 
-                                <input type="color" name="tCor" id="cCor" value="#0000FF"></p>
-                                <p><label for="cQtd">Quantidade:</label> 
-                                <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
-                                <p><label for="cTot">Preço Total: R$</label>
-                                <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly></p>
-                        </fieldset>     
-
-                        <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
-                    </form>
-                </article>
-            </section>
-            <footer id="rodape">
-                <p>Copyright &copy; 2017 - by Pedro Henrique<br>
-                <a href="https://www.facebook.com/" target="blank">Facebook</a> | Twitter</p>
-            </footer>
-        </div>
-    </body>
+		<footer id="rodape">
+			<p>Copyright &copy; 2017 - by Pedro Henrique</p>
+			<p>
+				<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook<span class="so-leitor"> (abre em nova aba)</span></a> |
+				<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter<span class="so-leitor"> (abre em nova aba)</span></a>
+			</p>
+			<p class="credito">Site-exercício do curso de HTML5 e CSS3 do Curso em Vídeo, de Gustavo Guanabara. Ilustrações próprias; não é um site oficial do Google.</p>
+		</footer>
+	</div>
+</body>
 </html>

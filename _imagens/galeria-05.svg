@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+	<title>Três óculos Glass com lentes diferentes: transparentes, escuras e alaranjadas</title>
+	<rect width="800" height="600" fill="#f4f1ea"/>
+	<g transform="translate(60 60) scale(1.6)" stroke-linecap="round" stroke-linejoin="round">
+	<path d="M22 37 Q20 82 56 82 Q90 82 86 28 Z" fill="#e3f2fd" fill-opacity=".8" stroke="#3a3a3a" stroke-width="2"/>
+	<path d="M114 28 Q110 82 144 82 Q180 82 178 37 Z" fill="#e3f2fd" fill-opacity=".8" stroke="#3a3a3a" stroke-width="2"/>
+	<path d="M10 40 Q100 14 190 40" fill="none" stroke="#3a3a3a" stroke-width="6"/>
+	<path d="M88 30 L90 50 M112 30 L110 50" fill="none" stroke="#8a8a8a" stroke-width="2.5"/>
+	<ellipse cx="90" cy="57" rx="5" ry="8" fill="#e3e3e3" stroke="#8a8a8a" stroke-width="2"/>
+	<ellipse cx="110" cy="57" rx="5" ry="8" fill="#e3e3e3" stroke="#8a8a8a" stroke-width="2"/>
+	<rect x="146" y="31" width="52" height="18" rx="7" fill="#2b2b2b"/>
+	<rect x="126" y="28" width="28" height="24" rx="3" fill="#bfe3ff" fill-opacity=".8" stroke="#5c8fb5" stroke-width="2"/>
+	<circle cx="168" cy="40" r="4" fill="#7fb7e6"/>
+	</g>
+	<g transform="translate(420 60) scale(1.6)" stroke-linecap="round" stroke-linejoin="round">
+	<path d="M22 37 Q20 82 56 82 Q90 82 86 28 Z" fill="#263238" fill-opacity=".8" stroke="#1a1a1a" stroke-width="2"/>
+	<path d="M114 28 Q110 82 144 82 Q180 82 178 37 Z" fill="#263238" fill-opacity=".8" stroke="#1a1a1a" stroke-width="2"/>
+	<path d="M10 40 Q100 14 190 40" fill="none" stroke="#1a1a1a" stroke-width="6"/>
+	<path d="M88 30 L90 50 M112 30 L110 50" fill="none" stroke="#8a8a8a" stroke-width="2.5"/>
+	<ellipse cx="90" cy="57" rx="5" ry="8" fill="#e3e3e3" stroke="#8a8a8a" stroke-width="2"/>
+	<ellipse cx="110" cy="57" rx="5" ry="8" fill="#e3e3e3" stroke="#8a8a8a" stroke-width="2"/>
+	<rect x="146" y="31" width="52" height="18" rx="7" fill="#2b2b2b"/>
+	<rect x="126" y="28" width="28" height="24" rx="3" fill="#bfe3ff" fill-opacity=".8" stroke="#5c8fb5" stroke-width="2"/>
+	<circle cx="168" cy="40" r="4" fill="#7fb7e6"/>
+	</g>
+	<g transform="translate(240 320) scale(1.6)" stroke-linecap="round" stroke-linejoin="round">
+	<path d="M22 37 Q20 82 56 82 Q90 82 86 28 Z" fill="#ffb74d" fill-opacity=".8" stroke="#bf5b17" stroke-width="2"/>
+	<path d="M114 28 Q110 82 144 82 Q180 82 178 37 Z" fill="#ffb74d" fill-opacity=".8" stroke="#bf5b17" stroke-width="2"/>
+	<path d="M10 40 Q100 14 190 40" fill="none" stroke="#bf5b17" stroke-width="6"/>
+	<path d="M88 30 L90 50 M112 30 L110 50" fill="none" stroke="#8a8a8a" stroke-width="2.5"/>
+	<ellipse cx="90" cy="57" rx="5" ry="8" fill="#e3e3e3" stroke="#8a8a8a" stroke-width="2"/>
+	<ellipse cx="110" cy="57" rx="5" ry="8" fill="#e3e3e3" stroke="#8a8a8a" stroke-width="2"/>
+	<rect x="146" y="31" width="52" height="18" rx="7" fill="#2b2b2b"/>
+	<rect x="126" y="28" width="28" height="24" rx="3" fill="#bfe3ff" fill-opacity=".8" stroke="#5c8fb5" stroke-width="2"/>
+	<circle cx="168" cy="40" r="4" fill="#7fb7e6"/>
+	</g>
+	<text x="220" y="240" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#404040" text-anchor="middle">Transparente</text>
+	<text x="580" y="240" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#404040" text-anchor="middle">Escura</text>
+	<text x="400" y="500" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#404040" text-anchor="middle">Alaranjada</text>
+</svg>

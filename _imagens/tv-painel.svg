@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 240" width="80" height="240" role="img">
+	<title>Painel de botões de uma TV antiga</title>
+	<rect width="80" height="240" rx="8" fill="#2f3b45"/>
+	<circle cx="40" cy="48" r="26" fill="#1a1a1a" stroke="#9aa7b0" stroke-width="3"/>
+	<path d="M40 48 L40 28" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+	<circle cx="40" cy="116" r="26" fill="#1a1a1a" stroke="#9aa7b0" stroke-width="3"/>
+	<path d="M40 116 L56 104" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+	<path d="M18 166 H62 M18 180 H62 M18 194 H62 M18 208 H62 M18 222 H62" stroke="#9aa7b0" stroke-width="4" stroke-linecap="round"/>
+</svg>

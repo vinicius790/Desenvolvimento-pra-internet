@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270" role="img">
+	<title>Duas pessoas sorrindo usando o Google Glass</title>
+	<rect width="480" height="270" fill="#e9f1f8"/>
+	<circle cx="420" cy="50" r="34" fill="#fff3c4"/>
+	<path d="M57 279.2 Q63.2 195.5 150 192.4 Q236.8 195.5 243 279.2 Z" fill="#2f6fd0"/>
+	<rect x="132.6" y="167.6" width="34.7" height="37.2" fill="#e8b88f"/>
+	<circle cx="150" cy="118" r="62" fill="#e8b88f"/>
+	<path d="M88 113 A63.2 63.2 0 0 1 212 113 Q181 79.6 150 87 Q112.8 92 88 113 Z" fill="#3b2a20"/>
+	<circle cx="127.7" cy="126.7" r="4.6" fill="#2b2b2b"/>
+	<circle cx="172.3" cy="126.7" r="4.6" fill="#2b2b2b"/>
+	<path d="M127.7 149 Q150 170.1 172.3 149 Z" fill="#ffffff" stroke="#2b2b2b" stroke-width="3.1" stroke-linejoin="round"/>
+	<path d="M88 116.8 Q150 104.4 212 116.8" fill="none" stroke="#3a3a3a" stroke-width="5" stroke-linecap="round"/>
+	<rect x="184.7" y="109.9" width="31" height="12.4" rx="5" fill="#2b2b2b"/>
+	<rect x="161.2" y="113" width="26" height="21.1" rx="2.5" fill="#bfe3ff" fill-opacity=".8" stroke="#5c8fb5" stroke-width="1.9"/>
+	<path d="M270 118.2 Q262.5 211 294.4 222.6 L375.6 222.6 Q407.5 211 400 118.2 Z" fill="#7a3b1d"/>
+	<path d="M248 274.8 Q253.8 196.5 335 193.6 Q416.2 196.5 422 274.8 Z" fill="#e8833a"/>
+	<rect x="318.8" y="170.4" width="32.5" height="34.8" fill="#f2c7a5"/>
+	<circle cx="335" cy="124" r="58" fill="#f2c7a5"/>
+	<path d="M277 119.4 A59.2 59.2 0 0 1 393 119.4 Q364 88 335 95 Q300.2 99.6 277 119.4 Z" fill="#7a3b1d"/>
+	<circle cx="314.1" cy="132.1" r="4.4" fill="#2b2b2b"/>
+	<circle cx="355.9" cy="132.1" r="4.4" fill="#2b2b2b"/>
+	<path d="M314.1 153 Q335 172.7 355.9 153 Z" fill="#ffffff" stroke="#2b2b2b" stroke-width="2.9" stroke-linejoin="round"/>
+	<path d="M277 122.8 Q335 111.2 393 122.8" fill="none" stroke="#3a3a3a" stroke-width="4.6" stroke-linecap="round"/>
+	<rect x="367.5" y="116.5" width="29" height="11.6" rx="4.6" fill="#2b2b2b"/>
+	<rect x="345.4" y="119.4" width="24.4" height="19.7" rx="2.3" fill="#bfe3ff" fill-opacity=".8" stroke="#5c8fb5" stroke-width="1.7"/>
+</svg>

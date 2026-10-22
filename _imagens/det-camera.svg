@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180" role="img">
+	<title>Lente da câmera do Glass: 5 megapixels para fotos e 720p para vídeos</title>
+	<rect width="320" height="180" fill="#eef3f7"/>
+	<rect x="30" y="34" width="260" height="84" rx="26" fill="#2b2b2b"/>
+	<circle cx="110" cy="76" r="34" fill="#606060" stroke="#e3e3e3" stroke-width="4"/>
+	<circle cx="110" cy="76" r="20" fill="#1a1a1a"/>
+	<circle cx="110" cy="76" r="10" fill="#7fb7e6"/>
+	<circle cx="102" cy="68" r="4" fill="#ffffff"/>
+	<circle cx="250" cy="60" r="6" fill="#c62828"/>
+	<text x="160" y="156" font-size="24" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#404040" text-anchor="middle">5 MP · 720p</text>
+</svg>

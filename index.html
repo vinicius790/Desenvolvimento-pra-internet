@@ -1,121 +1,288 @@
 <!DOCTYPE html>
-	<html>
-	<head>
-		<title>Tudo sobre Google Glass</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="_css/estilo.css">
-	</head>
-	<script language="javascript" src="_javascript/funcoes.js"></script>
-	<body>
-		<div id="interface">
-			<header id="cabecalho">
-				<hgroup>
-					<h1>Google Glass</h1>
-					<h2>A revolução do Google está chegando</h2>
-				</hgroup>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Saiba tudo sobre o Google Glass | Tudo sobre Google Glass</title>
+	<meta name="description" content="O que é o Google Glass, quando foi lançado, especificações técnicas e como funcionam os óculos de realidade aumentada do Google.">
+	<link rel="alternate" hreflang="pt-BR" href="index.html">
+	<link rel="alternate" hreflang="en" href="en/index.html">
+	<link rel="alternate" hreflang="x-default" href="index.html">
+	<link rel="icon" href="_imagens/glass-oculos.svg" type="image/svg+xml">
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#606060">
 
-				<img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+	<!-- Metadados Enriquecidos (SEO & OpenGraph) -->
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Saiba tudo sobre o Google Glass | Tudo sobre Google Glass">
+	<meta property="og:description" content="História, recursos, especificações técnicas e cronologia do Google Glass Explorer Edition, projeto pioneiro de computação vestível desenvolvido pelo Google X.">
+	<meta property="og:image" content="_imagens/glass-quadro.svg">
+	<meta property="og:locale" content="pt_BR">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Saiba tudo sobre o Google Glass">
+	<meta name="twitter:description" content="Especificações e história completa do projeto pioneiro de realidade aumentada do Google.">
+	<meta name="twitter:image" content="_imagens/glass-quadro.svg">
 
-				<nav id="menu">
-					<h1>Menu Principal</h1>
-					<ul>
-						<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
-						<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="specs.html">Especificações</a></li>
-						<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
-						<li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
-						<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fale-conosco.html">Fale conosco</a></li>
-					</ul>
-				</nav>
-			</header>
 
-			<section id="corpo">
-				<article id="noticia-principal">
-					<header id="cabecalho-artigo">
-						<hgroup>
-							<h3>Tecnologia > Inovações</h3>
-							<h1>Saiba tudo sobre o Google Glass</h1>
-							<h2>por Pedro Henrique</h2>
-							<h3 class="direita">Atualizado em 11/Dezembro/2017</h3>
-						</hgroup>
-					</header>
+	<link rel="stylesheet" href="_css/estilo.css">
+	<link rel="stylesheet" href="_css/simulador.css">
+	<link rel="stylesheet" href="_css/audio-guia.css">
+	<script src="_javascript/tema.js"></script>
+	<script src="_javascript/funcoes.js" defer></script>
+	<script src="_javascript/simulador.js" defer></script>
+	<script src="_javascript/audio-guia.js" defer></script>
+</head>
+<body>
+	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+	<div id="interface">
+		<header id="cabecalho">
+			<div class="marca">
+				<p class="nome-site"><a href="index.html">Google Glass</a></p>
+				<p class="slogan">A revolução do Google está chegando</p>
+				<img class="logo" src="_imagens/glass-logo.svg" alt="Logotipo do Google Glass" width="160" height="40">
+			</div>
+			<nav id="menu" aria-label="Menu principal">
+				<ul>
+					<li><a href="index.html" data-icone="_imagens/home.svg" aria-current="page">Home</a></li>
+					<li><a href="specs.html" data-icone="_imagens/especificacoes.svg">Especificações</a></li>
+					<li><a href="comparar.html" data-icone="_imagens/comparar.svg">Comparar</a></li>
+					<li><a href="linha-do-tempo.html" data-icone="_imagens/linha-do-tempo.svg">Linha do tempo</a></li>
+					<li><a href="fotos.html" data-icone="_imagens/fotos.svg">Fotos</a></li>
+					<li><a href="multimidia.html" data-icone="_imagens/multimidia.svg">Multimídia</a></li>
+					<li><a href="fale-conosco.html" data-icone="_imagens/contato.svg">Fale conosco</a></li>
+				</ul>
+			</nav>
+			<div class="ferramentas">
+				<form class="busca" role="search" action="busca.html">
+					<label class="so-leitor" for="busca-topo">Buscar no site</label>
+					<input type="search" id="busca-topo" name="q" placeholder="Buscar no site" minlength="2" required>
+					<button type="submit" class="botao-icone"><span class="icone-lupa" aria-hidden="true"></span><span class="so-leitor">Buscar</span></button>
+				</form>
+				<button type="button" class="botao-icone" id="alternar-tema" aria-pressed="false"><span class="icone-tema" aria-hidden="true"></span><span class="so-leitor">Modo escuro</span></button>
+				<button type="button" class="botao-icone" id="alternar-contraste" aria-label="Alto contraste" aria-pressed="false"><span class="icone-contraste" aria-hidden="true"></span></button>
+				<button type="button" class="botao-icone" id="alternar-fonte" aria-label="Aumentar tamanho da fonte (A+)" aria-pressed="false" title="Alternar tamanho da fonte (A+ / A-)"><span class="icone-fonte" aria-hidden="true">A+</span><span class="so-leitor">Aumentar tamanho da fonte</span></button>
+				<button type="button" class="botao-icone" id="alternar-audio-guia" aria-label="Ouvir áudio-guia da página" aria-pressed="false" aria-expanded="false"><span class="icone-audio-guia" aria-hidden="true"></span><span class="so-leitor">Áudio-guia</span></button>
+				<a class="idioma" href="en/index.html" hreflang="en" lang="en">English</a>
+			</div>
+			<img id="icone" src="_imagens/home.svg" alt="" aria-hidden="true" width="120" height="90">
+		</header>
+		<div id="painel-audio-guia" class="painel-audio-guia" hidden aria-hidden="true"></div>
 
-					<h2>O que é</h2>
-					<p>O Google Glass é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <a href="http://glass.google.com" target="_blank">Project Glass</a>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeo&shy;con&shy;ferên&shy;cias. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o Google Glass encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p>
+		<main id="conteudo" class="com-lateral">
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<p class="trilha">Tecnologia &rsaquo; Inovações</p>
+					<h1>Saiba tudo sobre o Google Glass</h1>
+					<p class="autor">por Pedro Henrique</p>
+					<p class="data">Atualizado em <time datetime="2017-12-11">11 de dezembro de 2017</time></p>
+				</header>
 
-					<figure class="foto-legenda">
-						<img src="_imagens/glass-quadro-homem-mulher.jpg">
-						<figcaption>
-							<h3>Google Glass</h3>
-							<p>Uma nova maneira de ver o mundo.</p>
-						</figcaption>
-					</figure>
+				<div class="nota" role="note">
+					<p><strong>Nota de revisão (2026):</strong> esta matéria descreve o Glass como ele era em 2013, ainda um protótipo, e é mantida como exercício do curso. O que aconteceu depois: a edição Explorer foi vendida a desenvolvedores a partir de 2013 por US$ 1.500, chegou ao público dos Estados Unidos em 2014 e teve as vendas encerradas em janeiro de 2015. O Google ainda lançou versões corporativas (Enterprise Edition, em 2017 e 2019) e descontinuou o produto em 2023.</p>
+				</div>
 
-					<h2>Data de lançamento</h2>
-					<p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.</p>
+				<h2>O que é</h2>
+				<p>O Google Glass é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <a href="https://pt.wikipedia.org/wiki/Google_Glass" target="_blank" rel="noopener noreferrer">Project Glass<span class="so-leitor"> (abre em nova aba)</span></a>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar videoconferências. Quando foi anunciado, seu lançamento estava previsto para 2014 e seu preço estimado era de US$ 1,5 mil. Em 2013 o Google Glass ainda estava em fase de testes e já possuía um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas havia registrado patentes antifurto e de desbloqueio de tela para o acessório.</p>
 
-					<h2>Especificações Técnicas</h2>
-					<table id="tabelaspec">
-						<caption>Tabela Técnica do Google Glass <span>Mar/2013</span></caption>
+				<figure class="foto-legenda">
+					<img src="_imagens/glass-quadro.svg" alt="Ilustração histórica de duas pessoas sorrindo usando armações do Google Glass Explorer Edition, demonstrando o uso cotidiano do visor de realidade aumentada." width="480" height="270">
+					<figcaption>
+						<strong>Google Glass</strong>
+						Uma nova maneira de ver o mundo.
+					</figcaption>
+				</figure>
 
+				<h2>Data de lançamento</h2>
+				<p>Em 2013 ainda não havia uma data específica e oficial para o lançamento do dispositivo. A expectativa era de demonstrações a partir daquele ano e de chegada às lojas em, pelo menos, 2014, o que se confirmou: a edição Explorer foi aberta ao público dos Estados Unidos em maio de 2014.</p>
+
+				<h2>Especificações Técnicas</h2>
+				<table id="tabelaspec">
+					<caption>Tabela Técnica do Google Glass <span>Mar/2013</span></caption>
+					<tbody>
 						<tr>
-							<td class="ce">Tela</td>
-							<td class="cd">Resolução equivalente a tela de 25"</td>
+							<th scope="row">Tela</th>
+							<td>Resolução equivalente a tela de 25"</td>
 						</tr>
-
 						<tr>
-							<td class="ce" rowspan="2">Camera</td>
-							<td class="cd">5MP para fotos</td>
+							<th scope="row" rowspan="2">Câmera</th>
+							<td>5 MP para fotos</td>
 						</tr>
-
 						<tr>
-							<td class="cd">720p para vídeos</td>
+							<td>720p para vídeos</td>
 						</tr>
-
 						<tr>
-							<td class="ce" rowspan="2">Conectividade</td>
-							<td class="cd">Wi-Fi</td>
+							<th scope="row" rowspan="2">Conectividade</th>
+							<td>Wi-Fi</td>
 						</tr>
-
 						<tr>
-							<td class="cd">Bluetooth</td>
+							<td>Bluetooth</td>
 						</tr>
-
 						<tr>
-							<td class="ce">Memória Interna</td>
-							<td class="cd">12GB</td>
+							<th scope="row">Memória Interna</th>
+							<td>12 GB</td>
 						</tr>
+					</tbody>
+				</table>
 
-					</table>
-					<h2>Como funciona</h2>
-					<p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça</p>
+				<h2>Como funciona</h2>
+				<p>De acordo com fontes próximas do Google, os óculos contam com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça.</p>
 
-					<p>O que você pode fazer com o Google Glasses
-					O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-<wbr/>humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
+				<h2>O que você pode fazer com o Google Glass</h2>
+				<p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
 
-					<video controls="controls" poster="_imagens/video-mini01.jpg" id="filme1">
+				<section id="simulador-glass" class="secao-simulador" aria-labelledby="titulo-simulador">
+					<h3 id="titulo-simulador">Simulador Interativo do Google Glass</h3>
+					<p>Experimente o Google Glass em 360°, explore a interface óptica do prisma Heads-Up Display (HUD) e teste comandos de voz em tempo real através do microfone ou dos botões interativos.</p>
+
+					<div class="simulador-grid">
+						<!-- Coluna 1: Modelo 3D Interativo -->
+						<div class="painel-3d">
+							<h4>Modelo 3D do Glass (Rotação 360°)</h4>
+							<div class="canvas-container-3d">
+								<canvas id="canvas-glass-3d" width="480" height="260" role="img" aria-label="Modelo 3D vetorial interativo do Google Glass Explorer Edition"></canvas>
+							</div>
+							<div class="controles-3d">
+								<button type="button" id="btn-3d-girar" class="btn-3d">Pausar Giro</button>
+								<button type="button" id="btn-3d-zoom-mais" class="btn-3d">Zoom +</button>
+								<button type="button" id="btn-3d-zoom-menos" class="btn-3d">Zoom &minus;</button>
+								<button type="button" id="btn-3d-reset" class="btn-3d">Resetar Vista</button>
+							</div>
+							<div class="hotspots-3d">
+								<button type="button" id="hotspot-prisma" class="btn-hotspot">Prisma Óptico</button>
+								<button type="button" id="hotspot-camera" class="btn-hotspot">Câmera 5 MP</button>
+								<button type="button" id="hotspot-touchpad" class="btn-hotspot">Touchpad Lateral</button>
+								<button type="button" id="hotspot-bateria" class="btn-hotspot">Bateria &amp; Condução Óssea</button>
+							</div>
+							<div id="info-hotspot-3d" class="info-hotspot" role="region" aria-live="polite">Clique em um dos componentes acima para ver detalhes de engenharia do Glass.</div>
+						</div>
+
+						<!-- Coluna 2: Prisma HUD & Comandos de Voz -->
+						<div class="painel-hud">
+							<h4>Prisma Heads-Up Display (HUD)</h4>
+							<div id="prisma-hud" class="hud-prisma-moldura">
+								<div class="hud-prisma-topo">
+									<span>Google Glass HUD</span>
+									<span>85% <span class="hud-bateria-icone" aria-hidden="true"><span class="hud-bateria-carga"></span></span></span>
+								</div>
+								<div class="prisma-hud-conteudo">
+									<!-- Card 0: Relógio & Início -->
+									<div id="hud-card-relogio" class="hud-card ativo">
+										<span class="hud-hora-grande">12:30</span>
+										<span class="hud-subtexto">Quarta-feira, 15 de abril</span>
+										<span class="hud-dica-ok">"ok glass,"</span>
+									</div>
+
+									<!-- Card 1: Clima -->
+									<div id="hud-card-tempo" class="hud-card">
+										<span class="hud-clima-temperatura">24°C</span>
+										<span class="hud-subtexto">São Paulo &bull; Céu Limpo</span>
+										<span class="hud-dica-ok">Vento 14 km/h &bull; Umidade 58%</span>
+									</div>
+
+									<!-- Card 2: GPS Navegação -->
+									<div id="hud-card-gps" class="hud-card">
+										<div class="hud-gps-direcao">
+											<span class="hud-gps-seta" aria-hidden="true">&Rsh;</span>
+											<div>
+												<span class="hud-subtexto">Em 200m vire à direita</span>
+												<strong>Av. Paulista</strong>
+											</div>
+										</div>
+										<span class="hud-dica-ok">12 min restantes (1,8 km)</span>
+									</div>
+
+									<!-- Card 3: Câmera -->
+									<div id="hud-card-camera" class="hud-card">
+										<div class="hud-camera-viewfinder">
+											<div class="hud-camera-reticulo" aria-hidden="true"></div>
+											<span class="hud-camera-status hud-subtexto">5 MP 720p HD Pronto</span>
+										</div>
+									</div>
+
+									<!-- Card 4: Mensagem -->
+									<div id="hud-card-mensagem" class="hud-card">
+										<span class="hud-subtexto">Larry Page</span>
+										<strong>"O protótipo do Glass ficou incrível! Parabéns equipe."</strong>
+										<span class="hud-dica-ok">Diga "responder" para ditar</span>
+									</div>
+
+									<!-- Card 5: Voz Ativo -->
+									<div id="hud-card-voz" class="hud-card">
+										<span class="hud-subtexto">Ouvindo comando de voz...</span>
+										<div class="hud-ondas-voz" aria-hidden="true">
+											<span class="hud-onda"></span>
+											<span class="hud-onda"></span>
+											<span class="hud-onda"></span>
+											<span class="hud-onda"></span>
+											<span class="hud-onda"></span>
+										</div>
+										<span class="hud-dica-ok">Fale agora no seu microfone</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- Controles Touchpad -->
+							<div class="controles-hud-touchpad">
+								<button type="button" id="btn-hud-anterior" class="btn-hud-nav">&larr; Deslizar Atrás</button>
+								<button type="button" id="btn-hud-selecionar" class="btn-hud-nav">Toque (Ação)</button>
+								<button type="button" id="btn-hud-proximo" class="btn-hud-nav">Deslizar Frente &rarr;</button>
+							</div>
+
+							<!-- Módulo de Voz -->
+							<div class="secao-voz">
+								<button type="button" id="btn-ouvir-voz" class="btn-microfone" aria-pressed="false">
+									<span class="icone-mic" aria-hidden="true">&#127897;</span>
+									<span id="texto-btn-voz">Falar comando de voz (Microfone)</span>
+								</button>
+								<p id="status-reconhecimento-voz" class="status-voz" role="status" aria-live="polite">Diga "OK Glass, tirar foto" ou clique nos botões abaixo:</p>
+								<div class="comandos-botoes-grid">
+									<button type="button" id="cmd-foto" class="btn-cmd-voz">&#128247; Tirar foto</button>
+									<button type="button" id="cmd-tempo" class="btn-cmd-voz">&#9728;&#65039; Previsão do tempo</button>
+									<button type="button" id="cmd-gps" class="btn-cmd-voz">&#128506;&#65039; Navegar (GPS)</button>
+									<button type="button" id="cmd-mensagem" class="btn-cmd-voz">&#128172; Enviar mensagem</button>
+									<button type="button" id="cmd-horas" class="btn-cmd-voz">&#9200; Ver horas</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<figure class="video">
+					<video id="filme1" controls preload="none" poster="_imagens/video-mini01.svg" width="394" height="222" aria-labelledby="legenda-filme1">
 						<source src="_media/how-it-feels.mp4" type="video/mp4">
-					</video>	
-				</article>
-			</section>
+						<p>Seu navegador não reproduz este vídeo. <a href="_media/how-it-feels.mp4">Baixe o arquivo MP4</a>.</p>
+					</video>
+					<figcaption id="legenda-filme1">Vídeo: como é usar o Glass (2 min 15 s, sem legendas).</figcaption>
+				</figure>
+			</article>
 
-			<aside id="lateral">
-				<h1>Outras Notícias</h1>
-				<h2>Vídeo mais recente</h2>
+			<aside id="lateral" aria-labelledby="titulo-lateral">
+				<h2 id="titulo-lateral">Outras Notícias</h2>
 
-				<video controls="controls" poster="_imagens/video-mini02.jpg" id="filme2">
-					<source src="_media/one-day.mp4" type="video/mp4">
-				</video>
+				<h3>Vídeo mais recente</h3>
+				<figure class="video">
+					<video id="filme2" controls preload="none" poster="_imagens/video-mini02.svg" width="496" height="278" aria-labelledby="legenda-filme2">
+						<source src="_media/one-day.mp4" type="video/mp4">
+						<p>Seu navegador não reproduz este vídeo. <a href="_media/one-day.mp4">Baixe o arquivo MP4</a>.</p>
+					</video>
+					<figcaption id="legenda-filme2">Vídeo: um dia com o Glass (2 min 30 s, sem legendas).</figcaption>
+				</figure>
 
-				<h2>Novidades no Glass</h2>
+				<h3>Novidades no Glass</h3>
 				<p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante.</p>
 
-				<p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador.</p>
+				<p>Além da surpresa do áudio, a tela montada à frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleriam a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador.</p>
 			</aside>
+		</main>
 
-			<footer id="rodape">
-				<p>Copyright &copy; 2017 - by Pedro Henrique<br>
-				<a href="https://www.facebook.com/" target="_blank">Facebook</a> | Twitter</p>
-			</footer>
-		</div>
-	</body>
+		<footer id="rodape">
+			<p>Copyright &copy; 2017 - by Pedro Henrique</p>
+			<p>
+				<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook<span class="so-leitor"> (abre em nova aba)</span></a> |
+				<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter<span class="so-leitor"> (abre em nova aba)</span></a>
+			</p>
+			<p class="credito">Site-exercício do curso de HTML5 e CSS3 do Curso em Vídeo, de Gustavo Guanabara. Ilustrações próprias; não é um site oficial do Google.</p>
+		</footer>
+	</div>
+</body>
 </html>

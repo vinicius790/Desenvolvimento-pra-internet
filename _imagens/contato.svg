@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" width="120" height="90" role="img">
+	<title>Fale conosco</title>
+	<rect x="12" y="28" width="76" height="50" rx="4" fill="#ffffff" stroke="#606060" stroke-width="3"/>
+	<path d="M12 32 L50 58 L88 32" fill="none" stroke="#606060" stroke-width="3" stroke-linejoin="round"/>
+	<circle cx="90" cy="28" r="20" fill="#2f6fd0"/>
+	<text x="90" y="37" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">@</text>
+</svg>

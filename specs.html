@@ -1,63 +1,195 @@
 <!DOCTYPE html>
-	<html>
-	<head>
-		<title>Tudo sobre Google Glass</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="_css/estilo.css">
-		<link rel="stylesheet" type="text/css" href="_css/specs.css">
-	</head>
-	<script language="javascript" src="_javascript/funcoes.js"></script>
-	<body>
-		<div id="interface">
-			<header id="cabecalho">
-				<hgroup>
-					<h1>Google Glass</h1>
-					<h2>A revolução do Google está chegando</h2>
-				</hgroup>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Raio-X no Google Glass | Tudo sobre Google Glass</title>
+	<meta name="description" content="Esquema interativo do Google Glass: clique nos pontos destacados para conhecer a tela, a câmera, os sensores e a bateria.">
+	<link rel="alternate" hreflang="pt-BR" href="specs.html">
+	<link rel="alternate" hreflang="en" href="en/specs.html">
+	<link rel="alternate" hreflang="x-default" href="specs.html">
+	<link rel="icon" href="_imagens/glass-oculos.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="_css/estilo.css">
+	<link rel="stylesheet" href="_css/specs.css">
+	<link rel="stylesheet" href="_css/audio-guia.css">
+	<link rel="stylesheet" href="_css/simulador-perf.css">
+	<script src="_javascript/tema.js"></script>
+	<script src="_javascript/funcoes.js" defer></script>
+	<script src="_javascript/audio-guia.js" defer></script>
+	<script src="_javascript/simulador-perf.js" defer></script>
+</head>
+<body>
+	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+	<div id="interface">
+		<header id="cabecalho">
+			<div class="marca">
+				<p class="nome-site"><a href="index.html">Google Glass</a></p>
+				<p class="slogan">A revolução do Google está chegando</p>
+				<img class="logo" src="_imagens/glass-logo.svg" alt="" width="160" height="40">
+			</div>
+			<nav id="menu" aria-label="Menu principal">
+				<ul>
+					<li><a href="index.html" data-icone="_imagens/home.svg">Home</a></li>
+					<li><a href="specs.html" data-icone="_imagens/especificacoes.svg" aria-current="page">Especificações</a></li>
+					<li><a href="comparar.html" data-icone="_imagens/comparar.svg">Comparar</a></li>
+					<li><a href="linha-do-tempo.html" data-icone="_imagens/linha-do-tempo.svg">Linha do tempo</a></li>
+					<li><a href="fotos.html" data-icone="_imagens/fotos.svg">Fotos</a></li>
+					<li><a href="multimidia.html" data-icone="_imagens/multimidia.svg">Multimídia</a></li>
+					<li><a href="fale-conosco.html" data-icone="_imagens/contato.svg">Fale conosco</a></li>
+				</ul>
+			</nav>
+			<div class="ferramentas">
+				<form class="busca" role="search" action="busca.html">
+					<label class="so-leitor" for="busca-topo">Buscar no site</label>
+					<input type="search" id="busca-topo" name="q" placeholder="Buscar no site" minlength="2" required>
+					<button type="submit" class="botao-icone"><span class="icone-lupa" aria-hidden="true"></span><span class="so-leitor">Buscar</span></button>
+				</form>
+				<button type="button" class="botao-icone" id="alternar-tema" aria-pressed="false"><span class="icone-tema" aria-hidden="true"></span><span class="so-leitor">Modo escuro</span></button>
+				<button type="button" class="botao-icone" id="alternar-contraste" aria-label="Alto contraste" aria-pressed="false"><span class="icone-contraste" aria-hidden="true"></span></button>
+				<button type="button" class="botao-icone" id="alternar-fonte" aria-label="Aumentar tamanho da fonte (A+)" aria-pressed="false" title="Alternar tamanho da fonte (A+ / A-)"><span class="icone-fonte" aria-hidden="true">A+</span><span class="so-leitor">Aumentar tamanho da fonte</span></button>
+				<button type="button" class="botao-icone" id="alternar-audio-guia" aria-label="Ouvir áudio-guia da página" aria-pressed="false" aria-expanded="false"><span class="icone-audio-guia" aria-hidden="true"></span><span class="so-leitor">Áudio-guia</span></button>
+				<a class="idioma" href="en/specs.html" hreflang="en" lang="en">English</a>
+			</div>
+			<img id="icone" src="_imagens/especificacoes.svg" alt="" width="120" height="90">
+		</header>
+		<div id="painel-audio-guia" class="painel-audio-guia" hidden aria-hidden="true"></div>
 
-				<img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+		<main id="conteudo">
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<p class="trilha">Glass &rsaquo; Especificações</p>
+					<h1>Raio-X no Google Glass</h1>
+					<p class="autor">por Pedro Henrique</p>
+					<p class="data">Atualizado em <time datetime="2017-12-11">11 de dezembro de 2017</time></p>
+				</header>
 
-				<nav id="menu">
-					<h1>Menu Principal</h1>
-					<ul>
-						<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
-						<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
-						<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
-						<li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
-						<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
-					</ul>
-				</nav>
-			</header>
-			<section id="corp-full">
-				<article id="noticia-principal">
-					<header id="cabecalho-artigo">
-						<hgroup>
-							<h3>Glass > Especificações</h3>
-							<h1>Raio-X no Google Glass</h1>
-							<h2>por Pedro Henrique</h2>
-							<h3 class="direita">Atualizado em 11/Dezembro/2017</h3>
-						</hgroup>
-					</header>
+				<p>Clique (ou toque) em qualquer ponto vermelho da imagem para ter mais informações sobre os recursos do Google Glass. Os detalhes aparecem no quadro ao lado da imagem (ou logo abaixo dela, em telas pequenas).</p>
 
-					<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+				<div id="raio-x">
+					<div class="esquema">
+						<img src="_imagens/glass-esquema.svg" alt="Esquema do Google Glass com quatro áreas destacadas em vermelho: tela, câmera, sensores e bateria." width="600" height="380">
+						<ul class="pontos">
+							<li><a class="ponto-tela" href="google-glass.html#tela" target="janela"><span aria-hidden="true">1</span><span class="rotulo">Tela</span></a></li>
+							<li><a class="ponto-camera" href="google-glass.html#camera" target="janela"><span aria-hidden="true">2</span><span class="rotulo">Câmera</span></a></li>
+							<li><a class="ponto-sensores" href="google-glass.html#sensores" target="janela"><span aria-hidden="true">3</span><span class="rotulo">Sensores</span></a></li>
+							<li><a class="ponto-gadgets" href="google-glass.html#gadgets" target="janela"><span aria-hidden="true">4</span><span class="rotulo">Bateria</span></a></li>
+						</ul>
+					</div>
+					<iframe src="google-glass.html" name="janela" id="frame-spec" title="Detalhes do recurso selecionado no esquema"></iframe>
+				</div>
 
-					<section id="conteudo">
-						<img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa">
-						<map name="meumapa">
-							<area shape="poly" coords="181,219,265,207,266,244,185,257" href="google-glass.html#tela" target="janela">
-							<area shape="circle" coords="158,243,12" href="google-glass.html#camera" target="janela">
-							<area shape="circle" coords="76,52,12" href="google-glass.html#gadgets" target="janela">
-							<area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" target="janela">
-						</map>
-						<iframe scrolling='no' src="google-glass.html" name="janela" id="frame-spec"></iframe>
-					</section>
-				</article>
-			</section>
+				<section id="simulador-performance" class="secao-simulador-perf" aria-labelledby="titulo-simulador-perf">
+					<h2 id="titulo-simulador-perf">Simulador de Performance AR/VR</h2>
+					<p class="intro-simulador-perf">Simule em tempo real as métricas fundamentais de hardware e computação gráfica em dispositivos de Realidade Estendida (XR): taxa de quadros (FPS), latência Motion-to-Photon, campo de visão (FOV), resolução angular (PPD) e consumo de bateria.</p>
 
-			<footer id="rodape">
-				<p>Copyright &copy; 2017 - by Pedro Henrique<br>
-				<a href="https://www.facebook.com/" target="blank">Facebook</a> | Twitter</p>
-			</footer>
-		</div>
-	</body>
+					<div class="grade-simulador-perf">
+						<div class="painel-controles-perf">
+							<div class="grupo-controle-perf">
+								<label for="perf-preset">Dispositivo / Preset XR:</label>
+								<select id="perf-preset">
+									<option value="glass-explorer">Google Glass Explorer (2013)</option>
+									<option value="glass-enterprise2">Glass Enterprise Edition 2 (2019)</option>
+									<option value="quest-3">Meta Quest 3 (2023)</option>
+									<option value="vision-pro">Apple Vision Pro (2024)</option>
+									<option value="hololens-2">Microsoft HoloLens 2 (2019)</option>
+									<option value="personalizado">Configuração Personalizada (Custom)</option>
+								</select>
+							</div>
+
+							<div class="grupo-controle-perf">
+								<label for="perf-fps">Taxa de Atualização (FPS): <span id="val-perf-fps">60 FPS</span></label>
+								<input type="range" id="perf-fps" min="30" max="120" step="1" value="60">
+							</div>
+
+							<div class="grupo-controle-perf">
+								<label for="perf-fov">Campo de Visão Diagonal (FOV): <span id="val-perf-fov">13°</span></label>
+								<input type="range" id="perf-fov" min="8" max="130" step="1" value="13">
+							</div>
+
+							<div class="grupo-controle-perf">
+								<label for="perf-bateria">Capacidade da Bateria (mAh): <span id="val-perf-bateria">570 mAh</span></label>
+								<input type="range" id="perf-bateria" min="400" max="6000" step="50" value="570">
+							</div>
+
+							<div class="grupo-controle-perf">
+								<label for="perf-brilho">Brilho do Display (%):</label>
+								<input type="range" id="perf-brilho" min="10" max="100" step="5" value="70">
+							</div>
+
+							<div class="grupo-controle-perf">
+								<label for="perf-potencia">Potência Base do SoC (Watts):</label>
+								<input type="range" id="perf-potencia" min="1.0" max="16.0" step="0.2" value="1.8">
+							</div>
+
+							<div class="grupo-controle-perf">
+								<label class="grupo-checkbox-perf" for="perf-reprojecao">
+									<input type="checkbox" id="perf-reprojecao">
+									Ativar Reprojeção Assíncrona (ATW / Timewarp)
+								</label>
+							</div>
+						</div>
+
+						<div class="painel-metricas-perf">
+							<div class="cartoes-metricas-perf">
+								<div class="card-metrica">
+									<span class="rotulo-metrica">Frame Budget</span>
+									<span class="valor-destaque" id="val-perf-frametime">16.67 ms</span>
+									<span class="detalhe-metrica">Orçamento por quadro</span>
+								</div>
+
+								<div class="card-metrica">
+									<span class="rotulo-metrica">Latência M2P</span>
+									<span class="valor-destaque" id="val-perf-m2p">35.0 ms</span>
+									<span class="detalhe-metrica">Motion-to-Photon</span>
+								</div>
+
+								<div class="card-metrica">
+									<span class="rotulo-metrica">Acuidade Angular</span>
+									<span class="valor-destaque" id="val-perf-ppd">49.2 PPD</span>
+									<span class="detalhe-metrica" id="val-perf-acuidade">Alta Fidelidade</span>
+								</div>
+
+								<div class="card-metrica">
+									<span class="rotulo-metrica">Autonomia Bateria</span>
+									<span class="valor-destaque" id="val-perf-autonomia">1h 13min</span>
+									<span class="detalhe-metrica" id="val-perf-termico">Baixo</span>
+								</div>
+							</div>
+
+							<div class="visualizacao-grafica-perf">
+								<div class="cone-container">
+									<svg id="perf-cone-svg" viewBox="0 0 300 150" aria-label="Diagrama do cone de visão do campo de visualização (FOV)"></svg>
+								</div>
+
+								<div class="pipeline-container">
+									<p class="pipeline-titulo">Distribuição dos Estágios de Latência (Pipeline):</p>
+									<div id="perf-pipeline-barra" class="pipeline-barra" aria-label="Gráfico de estágios de latência do pipeline"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="barra-acoes-perf">
+						<button type="button" class="botao-audio-perf" id="perf-btn-som" aria-pressed="true">
+							<span class="texto-som">Áudio: Ativo</span>
+						</button>
+					</div>
+
+					<div id="perf-status-acessivel" class="so-leitor" role="status" aria-live="polite"></div>
+				</section>
+
+				<p>Prefere ler tudo de uma vez? Veja a <a href="google-glass.html">página com todos os recursos do Google Glass</a>, ou <a href="comparar.html">compare os modelos lado a lado</a>.</p>
+			</article>
+		</main>
+
+		<footer id="rodape">
+			<p>Copyright &copy; 2017 - by Pedro Henrique</p>
+			<p>
+				<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook<span class="so-leitor"> (abre em nova aba)</span></a> |
+				<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter<span class="so-leitor"> (abre em nova aba)</span></a>
+			</p>
+			<p class="credito">Site-exercício do curso de HTML5 e CSS3 do Curso em Vídeo, de Gustavo Guanabara. Ilustrações próprias; não é um site oficial do Google.</p>
+		</footer>
+	</div>
+</body>
 </html>

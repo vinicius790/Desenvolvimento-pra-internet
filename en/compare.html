@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Compare Google Glass models | All about Google Glass</title>
+	<meta name="description" content="Google Glass version comparison: pick 2 to 3 models and see their specs side by side, with the differences highlighted.">
+	<link rel="alternate" hreflang="pt-BR" href="../comparar.html">
+	<link rel="alternate" hreflang="en" href="compare.html">
+	<link rel="alternate" hreflang="x-default" href="../comparar.html">
+	<link rel="icon" href="../_imagens/glass-oculos.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="../_css/estilo.css">
+	<link rel="stylesheet" href="../_css/comparar.css">
+	<link rel="stylesheet" href="../_css/audio-guia.css">
+	<script src="../_javascript/tema.js"></script>
+	<script src="../_javascript/funcoes.js" defer></script>
+	<script src="../_dados/modelos.js" defer></script>
+	<script src="../_javascript/dados.js" defer></script>
+	<script src="../_javascript/comparar.js" defer></script>
+	<script src="../_javascript/audio-guia.js" defer></script>
+</head>
+<body>
+	<a class="pular" href="#conteudo">Skip to content</a>
+	<div id="interface">
+		<header id="cabecalho">
+			<div class="marca">
+				<p class="nome-site"><a href="index.html">Google Glass</a></p>
+				<p class="slogan">Google’s revolution is coming</p>
+				<img class="logo" src="../_imagens/glass-logo.svg" alt="" width="160" height="40">
+			</div>
+			<nav id="menu" aria-label="Main menu">
+				<ul>
+					<li><a href="index.html" data-icone="../_imagens/home.svg">Home</a></li>
+					<li><a href="specs.html" data-icone="../_imagens/especificacoes.svg">Specs</a></li>
+					<li><a href="compare.html" data-icone="../_imagens/comparar.svg" aria-current="page">Compare</a></li>
+					<li><a href="timeline.html" data-icone="../_imagens/linha-do-tempo.svg">Timeline</a></li>
+					<li><a href="photos.html" data-icone="../_imagens/fotos.svg">Photos</a></li>
+					<li><a href="multimedia.html" data-icone="../_imagens/multimidia.svg">Multimedia</a></li>
+					<li><a href="contact.html" data-icone="../_imagens/contato.svg">Contact us</a></li>
+				</ul>
+			</nav>
+			<div class="ferramentas">
+				<form class="busca" role="search" action="search.html">
+					<label class="so-leitor" for="busca-topo">Search the site</label>
+					<input type="search" id="busca-topo" name="q" placeholder="Search the site" minlength="2" required>
+					<button type="submit" class="botao-icone"><span class="icone-lupa" aria-hidden="true"></span><span class="so-leitor">Search</span></button>
+				</form>
+				<button type="button" class="botao-icone" id="alternar-tema" aria-pressed="false"><span class="icone-tema" aria-hidden="true"></span><span class="so-leitor">Dark mode</span></button>
+				<button type="button" class="botao-icone" id="alternar-contraste" aria-label="High contrast" aria-pressed="false"><span class="icone-contraste" aria-hidden="true"></span></button>
+				<button type="button" class="botao-icone" id="alternar-fonte" aria-label="Increase font size (A+)" aria-pressed="false" title="Toggle font size (A+ / A-)"><span class="icone-fonte" aria-hidden="true">A+</span><span class="so-leitor">Increase font size</span></button>
+				<button type="button" class="botao-icone" id="alternar-audio-guia" aria-label="Listen to page audio guide" aria-pressed="false" aria-expanded="false"><span class="icone-audio-guia" aria-hidden="true"></span><span class="so-leitor">Audio guide</span></button>
+				<a class="idioma" href="../comparar.html" hreflang="pt-BR" lang="pt-BR">Português</a>
+			</div>
+			<img id="icone" src="../_imagens/comparar.svg" alt="" width="120" height="90">
+		</header>
+		<div id="painel-audio-guia" class="painel-audio-guia" hidden aria-hidden="true"></div>
+
+		<main id="conteudo">
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<p class="trilha">Glass &rsaquo; Compare</p>
+					<h1>Compare Google Glass models</h1>
+					<p class="autor">by Pedro Henrique</p>
+					<p class="data">Updated on <time datetime="2026-10-02">October 2, 2026</time></p>
+				</header>
+
+				<p>Glass had four versions between 2013 and 2019: two Explorer Editions, for developers and enthusiasts, and two Enterprise Editions, for businesses. Pick 2 to 3 models to see their specs side by side.</p>
+
+				<section id="comparador" data-dados="../_dados/modelos.js" aria-labelledby="titulo-comparador">
+					<h2 id="titulo-comparador">Pick the models</h2>
+					<fieldset id="selecao" aria-describedby="ajuda-selecao">
+						<legend>Models to compare</legend>
+						<span class="dica" id="ajuda-selecao">Check 2 to 3 models. Rows with different values get the ≠ sign and a red bar.</span>
+						<div id="opcoes-modelos"></div>
+					</fieldset>
+					<p class="opcao">
+						<input type="checkbox" id="so-diferencas">
+						<label for="so-diferencas">Show differences only</label>
+					</p>
+					<p><button type="button" id="compartilhar-comparacao" disabled>Copy comparison link</button></p>
+					<p id="aviso-comparador" role="status"></p>
+					<div class="rolagem">
+						<table id="tabela-comparacao">
+							<caption>Specs of the selected models</caption>
+							<thead></thead>
+							<tbody></tbody>
+						</table>
+					</div>
+				</section>
+
+				<section id="graficos-comparativos" class="secao-graficos" aria-labelledby="titulo-graficos">
+					<h2 id="titulo-graficos">Wearables Technical Comparison &amp; Evolution (2013 – 2024)</h2>
+					<p>A decade of wearable computing evolution: compare side by side Google Glass Explorer’s pioneering design (2013), the industrial maturity of Enterprise Edition 2 (2019), Meta Ray-Ban’s AI-powered daily smart glasses (2023), and Apple Vision Pro’s leap into spatial computing (2024).</p>
+
+					<div id="seletor-metricas" class="seletor-metricas" role="tablist" aria-label="Comparison metrics">
+						<button type="button" class="btn-metrica ativo" data-metrica="peso" role="tab" aria-selected="true" id="tab-peso">Peso (g)</button>
+						<button type="button" class="btn-metrica" data-metrica="bateria" role="tab" aria-selected="false" id="tab-bateria">Bateria &amp; Autonomia</button>
+						<button type="button" class="btn-metrica" data-metrica="resolucao" role="tab" aria-selected="false" id="tab-resolucao">Resolução de Tela</button>
+						<button type="button" class="btn-metrica" data-metrica="fov" role="tab" aria-selected="false" id="tab-fov">Campo de Visão (FoV)</button>
+						<button type="button" class="btn-metrica" data-metrica="casos-uso" role="tab" aria-selected="false" id="tab-casos-uso">Casos de Uso</button>
+					</div>
+
+					<div class="container-grafico">
+						<canvas id="canvas-grafico-comparativo" width="700" height="340" role="img" aria-label="Comparative bar chart between Google Glass Explorer, Enterprise 2, Meta Ray-Ban, and Apple Vision Pro"></canvas>
+					</div>
+
+					<div id="painel-metricas-acessivel" class="painel-metricas" role="tabpanel" aria-labelledby="tab-peso"></div>
+
+					<div id="cards-evolucao" class="cards-evolucao"></div>
+				</section>
+				<noscript>
+					<p class="nota">The comparison tool needs JavaScript, which is turned off in this browser.</p>
+				</noscript>
+
+				<div class="nota" role="note">
+					<p>Values checked against Google’s spec sheets and news reports of the time (sources below). See also the <a href="timeline.html">product timeline</a>.</p>
+					<ul id="fontes-modelos" class="fontes" aria-label="Sources for the specs"></ul>
+				</div>
+			</article>
+		</main>
+
+		<footer id="rodape">
+			<p>Copyright &copy; 2017 - by Pedro Henrique</p>
+			<p>
+				<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook<span class="so-leitor"> (opens in a new tab)</span></a> |
+				<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter<span class="so-leitor"> (opens in a new tab)</span></a>
+			</p>
+			<p class="credito">Exercise site from the HTML5 and CSS3 course by Curso em Vídeo (Gustavo Guanabara). Original illustrations; not an official Google site.</p>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "Google Glass - Tudo Sobre",
+  "short_name": "Google Glass",
+  "description": "Especificações técnicas, comparador de modelos, linha do tempo e história completa do Google Glass.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#606060",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "_imagens/glass-oculos.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

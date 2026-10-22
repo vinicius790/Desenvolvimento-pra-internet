@@ -1,59 +1,251 @@
 <!DOCTYPE html>
-	<html>
-	<head>
-		<title>Tudo sobre Google Glass</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="_css/estilo.css">
-		<link rel="stylesheet" type="text/css" href="_css/media.css">
-	</head>
-	<script language="javascript" src="_javascript/funcoes.js"></script>
-	<body>
-		<div id="interface">
-			<header id="cabecalho">
-				<hgroup>
-					<h1>Google Glass</h1>
-					<h2>A revolução do Google está chegando</h2>
-				</hgroup>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sons e vídeos do Google Glass | Tudo sobre Google Glass</title>
+	<meta name="description" content="Vídeo de primeiros passos com o Google Glass e uma faixa de áudio, em players nativos do navegador.">
+	<link rel="alternate" hreflang="pt-BR" href="multimidia.html">
+	<link rel="alternate" hreflang="en" href="en/multimedia.html">
+	<link rel="alternate" hreflang="x-default" href="multimidia.html">
+	<link rel="icon" href="_imagens/glass-oculos.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="_css/estilo.css">
+	<link rel="stylesheet" href="_css/media.css">
+	<link rel="stylesheet" href="_css/audio-guia.css">
+	<link rel="stylesheet" href="_css/quiz.css">
+	<script src="_javascript/tema.js"></script>
+	<script src="_javascript/funcoes.js" defer></script>
+	<script src="_javascript/audio-guia.js" defer></script>
+	<script src="_javascript/quiz.js" defer></script>
+</head>
+<body>
+	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+	<div id="interface">
+		<header id="cabecalho">
+			<div class="marca">
+				<p class="nome-site"><a href="index.html">Google Glass</a></p>
+				<p class="slogan">A revolução do Google está chegando</p>
+				<img class="logo" src="_imagens/glass-logo.svg" alt="" width="160" height="40">
+			</div>
+			<nav id="menu" aria-label="Menu principal">
+				<ul>
+					<li><a href="index.html" data-icone="_imagens/home.svg">Home</a></li>
+					<li><a href="specs.html" data-icone="_imagens/especificacoes.svg">Especificações</a></li>
+					<li><a href="comparar.html" data-icone="_imagens/comparar.svg">Comparar</a></li>
+					<li><a href="linha-do-tempo.html" data-icone="_imagens/linha-do-tempo.svg">Linha do tempo</a></li>
+					<li><a href="fotos.html" data-icone="_imagens/fotos.svg">Fotos</a></li>
+					<li><a href="multimidia.html" data-icone="_imagens/multimidia.svg" aria-current="page">Multimídia</a></li>
+					<li><a href="fale-conosco.html" data-icone="_imagens/contato.svg">Fale conosco</a></li>
+				</ul>
+			</nav>
+			<div class="ferramentas">
+				<form class="busca" role="search" action="busca.html">
+					<label class="so-leitor" for="busca-topo">Buscar no site</label>
+					<input type="search" id="busca-topo" name="q" placeholder="Buscar no site" minlength="2" required>
+					<button type="submit" class="botao-icone"><span class="icone-lupa" aria-hidden="true"></span><span class="so-leitor">Buscar</span></button>
+				</form>
+				<button type="button" class="botao-icone" id="alternar-tema" aria-pressed="false"><span class="icone-tema" aria-hidden="true"></span><span class="so-leitor">Modo escuro</span></button>
+				<button type="button" class="botao-icone" id="alternar-contraste" aria-label="Alto contraste" aria-pressed="false"><span class="icone-contraste" aria-hidden="true"></span></button>
+				<button type="button" class="botao-icone" id="alternar-fonte" aria-label="Aumentar tamanho da fonte (A+)" aria-pressed="false" title="Alternar tamanho da fonte (A+ / A-)"><span class="icone-fonte" aria-hidden="true">A+</span><span class="so-leitor">Aumentar tamanho da fonte</span></button>
+				<button type="button" class="botao-icone" id="alternar-audio-guia" aria-label="Ouvir áudio-guia da página" aria-pressed="false" aria-expanded="false"><span class="icone-audio-guia" aria-hidden="true"></span><span class="so-leitor">Áudio-guia</span></button>
+				<a class="idioma" href="en/multimedia.html" hreflang="en" lang="en">English</a>
+			</div>
+			<img id="icone" src="_imagens/multimidia.svg" alt="" width="120" height="90">
+		</header>
+		<div id="painel-audio-guia" class="painel-audio-guia" hidden aria-hidden="true"></div>
 
-				<img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+		<main id="conteudo">
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<p class="trilha">Glass &rsaquo; Multimídia</p>
+					<h1>Sons e Vídeos</h1>
+					<p class="autor">por Pedro Henrique</p>
+					<p class="data">Atualizado em <time datetime="2017-12-11">11 de dezembro de 2017</time></p>
+				</header>
 
-				<nav id="menu">
-					<h1>Menu Principal</h1>
-					<ul>
-						<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="index.html">Home</a></li>
-						<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
-						<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
-						<li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
-						<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
-					</ul>
-				</nav>
-			</header>
-			<section id="corp-full">
-				<article id="noticia-principal">
-					<header id="cabecalho-artigo">
-						<hgroup>
-							<h3>Glass > Multimídia</h3>
-							<h1>Sons e Vídeos</h1>
-							<h2>por Pedro Henrique</h2>
-							<h3 class="direita">Atualizado em 11/Dezembro/2017</h3>
-						</hgroup>
-					</header>
-					<div id="tv-radio">
-						<audio id="musica" controls="controls">
-							<source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg">
-							Desculpe, não foi possível carregar o áudio.
-						</audio>
-						<video id="filme" controls="controls" poster="_imagens/video-mini03.jpg">
+				<p>Assista ao vídeo de primeiros passos na TV e ouça a música no rádio. Nada começa a tocar sozinho, e os arquivos só são baixados quando você aperta o play.</p>
+
+				<h2>Áudio e Vídeo</h2>
+				<div id="tv-radio">
+					<figure class="tv">
+						<video id="filme" controls preload="none" poster="_imagens/video-mini03.svg" width="496" height="278" aria-labelledby="legenda-filme">
 							<source src="_media/getting-started.mp4" type="video/mp4">
-							Desculpe, não foi possível carregar o vídeo.
+							<p>Seu navegador não reproduz este vídeo. <a href="_media/getting-started.mp4">Baixe o arquivo MP4</a>.</p>
 						</video>
+						<img class="tv-painel" src="_imagens/tv-painel.svg" alt="" width="80" height="240">
+						<figcaption id="legenda-filme">Vídeo: primeiros passos com o Glass (1 min 07 s, sem legendas).</figcaption>
+					</figure>
+
+					<figure class="radio">
+						<img src="_imagens/radio-grade.svg" alt="" width="300" height="80">
+						<audio id="musica" controls preload="none" aria-labelledby="legenda-musica">
+							<source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg">
+							<p>Seu navegador não reproduz este áudio. <a href="_media/2009-lovers-carvings-bibio.mp3">Baixe o arquivo MP3</a>.</p>
+						</audio>
+						<figcaption id="legenda-musica">Áudio: “Lovers’ Carvings”, de Bibio (álbum <cite>Ambivalence Avenue</cite>, 2009), 3 min 54 s.</figcaption>
+					</figure>
+				</div>
+
+				<section id="quiz-tecnico" class="secao-quiz-tecnico" aria-labelledby="titulo-quiz">
+					<h2 id="titulo-quiz">Quiz Técnico XR &amp; Certificado de Especialista</h2>
+					<p class="intro-quiz-tecnico">Teste seus conhecimentos em computação espacial, óptica colimadora, latência Motion-to-Photon, acústica por condução óssea e padrões WebXR. Ao atingir 70% ou mais de aproveitamento, emita e baixe seu Certificado Oficial de Especialista gerado em alta resolução.</p>
+
+					<form id="form-quiz" class="questoes-quiz" novalidate>
+						<fieldset id="grupo-p1" class="grupo-questao">
+							<legend>1. Óptica &amp; Waveguides: Qual é o princípio óptico do display do Google Glass original para sobrepor imagens ao campo de visão?</legend>
+							<div class="opcoes-questao">
+								<label class="rotulo-opcao">
+									<input type="radio" name="p1" value="0" required>
+									Lentes Fresnel reflexivas com oclusão total da visão periférica
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p1" value="1">
+									Prisma óptico colimador semi-transparente projetando imagem virtual no quadrante superior
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p1" value="2">
+									Painel micro-LED translúcido colado diretamente na pupila
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p1" value="3">
+									Projeção de laser dicroico retinal em ambiente escuro
+								</label>
+							</div>
+							<div id="feedback-p1" class="feedback-questao" hidden></div>
+						</fieldset>
+
+						<fieldset id="grupo-p2" class="grupo-questao">
+							<legend>2. Latência Motion-to-Photon: Qual é a faixa de latência M2P máxima recomendada em XR para prevenir cinetose (simulator sickness)?</legend>
+							<div class="opcoes-questao">
+								<label class="rotulo-opcao">
+									<input type="radio" name="p2" value="0" required>
+									Inferior a 20 milissegundos (idealmente ≤ 12 ms com reprojeção assíncrona)
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p2" value="1">
+									Entre 80 e 120 milissegundos
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p2" value="2">
+									Mais de 250 milissegundos para economia de energia
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p2" value="3">
+									Exatamente 60 milissegundos em qualquer condição
+								</label>
+							</div>
+							<div id="feedback-p2" class="feedback-questao" hidden></div>
+						</fieldset>
+
+						<fieldset id="grupo-p3" class="grupo-questao">
+							<legend>3. Acústica &amp; Condução Óssea: Como o transdutor de condução óssea do Glass transmite áudio sem tampar os ouvidos?</legend>
+							<div class="opcoes-questao">
+								<label class="rotulo-opcao">
+									<input type="radio" name="p3" value="0" required>
+									Ondas eletromagnéticas direcionadas diretamente ao nervo auditivo
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p3" value="1">
+									Vibrações mecânicas aplicadas aos ossos temporais que estimulam diretamente a cóclea
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p3" value="2">
+									Micro-alto-falantes de ar ultrassônicos de alta frequência
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p3" value="3">
+									Indução magnética com receptores implantados
+								</label>
+							</div>
+							<div id="feedback-p3" class="feedback-questao" hidden></div>
+						</fieldset>
+
+						<fieldset id="grupo-p4" class="grupo-questao">
+							<legend>4. Rastreamento Espacial: Qual é a distinção fundamental entre rastreamento 3-DoF e 6-DoF em dispositivos XR?</legend>
+							<div class="opcoes-questao">
+								<label class="rotulo-opcao">
+									<input type="radio" name="p4" value="0" required>
+									3-DoF mede apenas aceleração linear nos eixos X e Y
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p4" value="1">
+									6-DoF mede apenas batimentos cardíacos e pupilometria
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p4" value="2">
+									3-DoF rastreia rotação da cabeça (Yaw/Pitch/Roll); 6-DoF rastreia rotação e translação espacial (X/Y/Z)
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p4" value="3">
+									6-DoF requer 6 câmeras físicas dedicadas para funcionar
+								</label>
+							</div>
+							<div id="feedback-p4" class="feedback-questao" hidden></div>
+						</fieldset>
+
+						<fieldset id="grupo-p5" class="grupo-questao">
+							<legend>5. Padrões WebXR: Qual padrão da W3C viabiliza aplicações imersivas AR/VR executadas nativamente no navegador web?</legend>
+							<div class="opcoes-questao">
+								<label class="rotulo-opcao">
+									<input type="radio" name="p5" value="0" required>
+									WebXR Device API
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p5" value="1">
+									Shockwave 3D Plugin
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p5" value="2">
+									ActiveX Virtual Reality Kit
+								</label>
+								<label class="rotulo-opcao">
+									<input type="radio" name="p5" value="3">
+									Silverlight Immersive Extension
+								</label>
+							</div>
+							<div id="feedback-p5" class="feedback-questao" hidden></div>
+						</fieldset>
+
+						<div class="acoes-quiz">
+							<button type="submit" class="botao" id="btn-enviar-quiz">Enviar Respostas do Quiz</button>
+							<button type="button" class="botao botao-secundario" id="btn-reiniciar-quiz" hidden>Tentar Novamente</button>
+						</div>
+					</form>
+
+					<div id="resultado-quiz" class="painel-resultado-quiz" hidden>
+						<p class="titulo-resultado-quiz">Resultado da Avaliação: <span id="pontuacao-quiz" class="pontuacao-quiz"></span></p>
+						<p id="mensagem-resultado-quiz"></p>
+
+						<div id="secao-certificado" class="painel-emissao-cert" hidden>
+							<div class="campo-nome-cert">
+								<label for="quiz-nome-certificado">Nome completo para o certificado oficial:</label>
+								<input type="text" id="quiz-nome-certificado" placeholder="Digite seu nome completo" maxlength="50">
+							</div>
+							<button type="button" class="botao" id="btn-gerar-certificado">Gerar Certificado em Alta Resolução</button>
+
+							<div class="visualizacao-canvas-cert">
+								<canvas id="canvas-certificado" width="1200" height="840" hidden aria-label="Certificado de Conclusão em Tecnologias XR"></canvas>
+								<div class="botoes-cert">
+									<button type="button" class="botao" id="btn-baixar-certificado" hidden>Baixar Certificado (PNG)</button>
+									<button type="button" class="botao botao-secundario" id="btn-imprimir-certificado" hidden>Imprimir / Salvar PDF</button>
+								</div>
+							</div>
+						</div>
 					</div>
-				</article>
-			</section>
-			<footer id="rodape">
-				<p>Copyright &copy; 2017 - by Pedro Henrique<br>
-				<a href="https://www.facebook.com/" target="blank">Facebook</a> | Twitter</p>
-			</footer>
-		</div>
-	</body>
+
+					<div id="quiz-status-acessivel" class="so-leitor" role="status" aria-live="polite"></div>
+				</section>
+			</article>
+		</main>
+
+		<footer id="rodape">
+			<p>Copyright &copy; 2017 - by Pedro Henrique</p>
+			<p>
+				<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook<span class="so-leitor"> (abre em nova aba)</span></a> |
+				<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter<span class="so-leitor"> (abre em nova aba)</span></a>
+			</p>
+			<p class="credito">Site-exercício do curso de HTML5 e CSS3 do Curso em Vídeo, de Gustavo Guanabara. Ilustrações próprias; não é um site oficial do Google.</p>
+		</footer>
+	</div>
+</body>
 </html>

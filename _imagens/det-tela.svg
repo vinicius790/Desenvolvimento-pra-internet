@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180" role="img">
+	<title>Prisma da tela do Glass diante do olho, mostrando as horas</title>
+	<rect width="320" height="180" fill="#eef3f7"/>
+	<path d="M20 60 Q160 20 300 52" fill="none" stroke="#3a3a3a" stroke-width="8" stroke-linecap="round"/>
+	<path d="M60 112 Q130 60 200 112 Q130 158 60 112 Z" fill="#ffffff" stroke="#606060" stroke-width="3"/>
+	<circle cx="130" cy="110" r="24" fill="#6d4c41"/>
+	<circle cx="130" cy="110" r="10" fill="#1a1a1a"/>
+	<rect x="212" y="46" width="88" height="24" rx="8" fill="#2b2b2b"/>
+	<rect x="150" y="58" width="92" height="64" rx="5" fill="#bfe3ff" fill-opacity=".85" stroke="#5c8fb5" stroke-width="3"/>
+	<text x="196" y="100" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#1a3a5a" text-anchor="middle">12:30</text>
+</svg>

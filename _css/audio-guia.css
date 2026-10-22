@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/* Sintetizador de áudio-guia acessível (Web Speech Synthesis API). */
+
+.icone-audio-guia {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-image: url(../_imagens/audio-guia.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+#alternar-audio-guia[aria-pressed="true"] {
+	background-color: var(--foco);
+	color: var(--branco);
+	border-color: var(--foco);
+}
+
+.painel-audio-guia {
+	margin: 1rem 0;
+	padding: 1rem 1.25rem;
+	border: 2px solid var(--foco);
+	border-radius: 8px;
+	background-color: var(--fundo-suave);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.painel-audio-guia[hidden] {
+	display: none;
+}
+
+.audio-guia-topo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 0.75rem;
+}
+
+.audio-guia-status {
+	font-weight: bold;
+	color: var(--cinza-forte);
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.audio-guia-status .indicador-ativo {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #2e7d32;
+	animation: pulsar-audio 1.5s infinite ease-in-out;
+}
+
+@keyframes pulsar-audio {
+	0%, 100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(1.3);
+		opacity: 0.6;
+	}
+}
+
+.audio-guia-acoes {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.6rem;
+}
+
+.audio-guia-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.45rem 0.85rem;
+	border: 1px solid var(--cinza-escuro);
+	border-radius: 4px;
+	background-color: var(--branco);
+	color: var(--preto);
+	font: inherit;
+	font-size: 0.9rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.audio-guia-btn:hover {
+	background-color: var(--cinza-claro);
+}
+
+.audio-guia-btn:active {
+	transform: scale(0.98);
+}
+
+.audio-guia-btn-destaque {
+	background-color: var(--foco);
+	color: var(--branco);
+	border-color: var(--foco);
+}
+
+.audio-guia-btn-destaque:hover {
+	background-color: #084298;
+}
+
+.audio-guia-velocidade {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	font-size: 0.85rem;
+	color: var(--cinza-texto);
+}
+
+.audio-guia-velocidade select {
+	padding: 0.3rem 0.5rem;
+	border: 1px solid var(--borda-campo);
+	border-radius: 4px;
+	background-color: var(--branco);
+	color: var(--preto);
+	font: inherit;
+	font-size: 0.85rem;
+}
+
+.audio-guia-progresso {
+	margin-top: 0.6rem;
+	font-size: 0.85rem;
+	color: var(--cinza-texto);
+}
+
+/* Destaque acessível para o bloco/parágrafo que está sendo lido */
+.audio-guia-leitura-ativa {
+	background-color: rgba(11, 87, 208, 0.12);
+	outline: 2px solid var(--foco);
+	outline-offset: 4px;
+	border-radius: 4px;
+	transition: background-color 0.3s ease, outline 0.3s ease;
+}
+
+:root[data-tema="escuro"] .icone-audio-guia {
+	filter: invert(1);
+}
+
+:root[data-tema="escuro"] .audio-guia-leitura-ativa {
+	background-color: rgba(255, 255, 255, 0.15);
+	outline-color: #90caf9;
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
+	<title>Mão tocando</title>
+	<g fill="none" stroke="#c62828" stroke-width="4" stroke-linecap="round">
+	<path d="M34 22 L26 12 M58 14 L58 2 M82 22 L90 12"/>
+	</g>
+	<g fill="#f2c7a5" stroke="#606060" stroke-width="3" stroke-linejoin="round">
+	<rect x="24" y="62" width="18" height="34" rx="9" transform="rotate(-28 33 79)"/>
+	<rect x="40" y="58" width="52" height="54" rx="16"/>
+	<rect x="50" y="22" width="16" height="60" rx="8"/>
+	</g>
+	<path d="M68 60 L68 74 M80 62 L80 74" stroke="#606060" stroke-width="3" stroke-linecap="round"/>
+</svg>

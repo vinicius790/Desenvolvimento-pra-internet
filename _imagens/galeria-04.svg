@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+	<title>Pessoa de costas vendo uma grande tela flutuante com a medida de 25 polegadas</title>
+	<rect width="800" height="600" fill="#eceff1"/>
+	<rect x="270" y="80" width="470" height="270" rx="10" fill="#bfe3ff" fill-opacity=".7" stroke="#5c8fb5" stroke-width="5"/>
+	<path d="M292 330 L718 100" stroke="#2f6fd0" stroke-width="4" stroke-dasharray="14 10"/>
+	<path d="M292 330 L316 328 M292 330 L302 308 M718 100 L694 102 M718 100 L708 122" stroke="#2f6fd0" stroke-width="4" stroke-linecap="round"/>
+	<text x="505" y="250" font-size="90" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#1a3a5a" text-anchor="middle">25"</text>
+	<ellipse cx="160" cy="640" rx="190" ry="130" fill="#455a64"/>
+	<circle cx="160" cy="430" r="90" fill="#37474f"/>
+	<path d="M72 410 Q160 372 250 404" fill="none" stroke="#1a1a1a" stroke-width="9" stroke-linecap="round"/>
+	<rect x="232" y="392" width="40" height="28" rx="4" fill="#bfe3ff" stroke="#5c8fb5" stroke-width="3"/>
+</svg>

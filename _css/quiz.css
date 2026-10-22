@@ -1,0 +1,242 @@
+/*
+ * Estilos para o Quiz Técnico XR & Emissão de Certificado
+ * WCAG AAA compliant: alto contraste (mínimo 7:1 para texto normal), foco acessível e responsividade.
+ */
+
+.secao-quiz-tecnico {
+	margin: 2.5rem 0;
+	padding: 1.5rem;
+	background: var(--fundo-suave, #f4f6f8);
+	border: 2px solid var(--cinza-medio, #cccccc);
+	border-radius: 8px;
+}
+
+.secao-quiz-tecnico h2 {
+	margin-top: 0;
+	color: var(--cinza-escuro, #202020);
+	border-bottom: 2px solid var(--cinza-medio, #cccccc);
+	padding-bottom: 0.5rem;
+}
+
+.intro-quiz-tecnico {
+	font-size: 1.05rem;
+	line-height: 1.6;
+	color: var(--cinza-texto, #333333);
+}
+
+.questoes-quiz {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	margin-top: 1.5rem;
+}
+
+.grupo-questao {
+	background: var(--branco, #ffffff);
+	border: 2px solid var(--cinza-medio, #cccccc);
+	border-radius: 6px;
+	padding: 1rem 1.25rem;
+	margin: 0;
+}
+
+.grupo-questao legend {
+	font-weight: bold;
+	font-size: 1.05rem;
+	color: var(--preto, #111111);
+	padding: 0 0.5rem;
+}
+
+.opcoes-questao {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	margin-top: 0.75rem;
+}
+
+.rotulo-opcao {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+	cursor: pointer;
+	font-size: 1rem;
+	color: var(--cinza-texto, #333333);
+	padding: 0.4rem;
+	border-radius: 4px;
+}
+
+.rotulo-opcao:hover {
+	background: var(--fundo-suave, #f0f4f8);
+}
+
+.rotulo-opcao input[type="radio"] {
+	margin-top: 0.25rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	cursor: pointer;
+}
+
+.rotulo-opcao input[type="radio"]:focus-visible {
+	outline: 3px solid var(--foco, #0056b3);
+	outline-offset: 2px;
+}
+
+.feedback-questao {
+	margin-top: 0.75rem;
+	padding: 0.6rem 0.8rem;
+	border-radius: 4px;
+	font-size: 0.95rem;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.resposta-correta {
+	border-color: #0b6623 !important;
+	background: #f0fff4 !important;
+}
+
+.resposta-correta .feedback-questao {
+	background: #e6f7ec;
+	color: #074716;
+	border-left: 4px solid #0b6623;
+}
+
+.resposta-incorreta {
+	border-color: #b33900 !important;
+	background: #fff8f5 !important;
+}
+
+.resposta-incorreta .feedback-questao {
+	background: #fdeee8;
+	color: #8c2600;
+	border-left: 4px solid #b33900;
+}
+
+.acoes-quiz {
+	margin-top: 1.5rem;
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.painel-resultado-quiz {
+	margin-top: 1.75rem;
+	padding: 1.25rem;
+	background: var(--branco, #ffffff);
+	border: 2px solid var(--cinza-escuro, #333333);
+	border-radius: 6px;
+}
+
+.titulo-resultado-quiz {
+	font-size: 1.2rem;
+	margin: 0 0 0.5rem 0;
+	color: var(--cinza-escuro, #111111);
+}
+
+.pontuacao-quiz {
+	color: var(--foco, #0056b3);
+	font-weight: bold;
+}
+
+.painel-emissao-cert {
+	margin-top: 1.5rem;
+	padding-top: 1.25rem;
+	border-top: 2px dashed var(--cinza-medio, #cccccc);
+}
+
+.campo-nome-cert {
+	margin-bottom: 1rem;
+}
+
+.campo-nome-cert label {
+	display: block;
+	font-weight: bold;
+	color: var(--preto, #111111);
+	margin-bottom: 0.4rem;
+}
+
+.campo-nome-cert input[type="text"] {
+	width: 100%;
+	max-width: 480px;
+	padding: 0.6rem;
+	font-size: 1.05rem;
+	border: 2px solid var(--borda-campo, #666666);
+	border-radius: 4px;
+	background: var(--branco, #ffffff);
+	color: var(--preto, #111111);
+}
+
+.campo-nome-cert input[type="text"]:focus-visible {
+	outline: 3px solid var(--foco, #0056b3);
+	outline-offset: 2px;
+}
+
+.visualizacao-canvas-cert {
+	margin-top: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+#canvas-certificado {
+	max-width: 100%;
+	height: auto;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+	border: 1px solid #cbd5e1;
+	border-radius: 4px;
+}
+
+.botoes-cert {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* Modo escuro e alto contraste */
+:root[data-tema="escuro"] .secao-quiz-tecnico {
+	background: #1e1e1e;
+	border-color: #444444;
+}
+
+:root[data-tema="escuro"] .grupo-questao {
+	background: #252525;
+	border-color: #555555;
+}
+
+:root[data-tema="escuro"] .rotulo-opcao:hover {
+	background: #2e2e2e;
+}
+
+:root[data-tema="escuro"] .painel-resultado-quiz {
+	background: #252525;
+	border-color: #777777;
+}
+
+:root[data-tema="escuro"] .resposta-correta {
+	background: #122415 !important;
+	border-color: #4cd964 !important;
+}
+
+:root[data-tema="escuro"] .resposta-correta .feedback-questao {
+	background: #17331b;
+	color: #98f5a6;
+}
+
+:root[data-tema="escuro"] .resposta-incorreta {
+	background: #2b1411 !important;
+	border-color: #ff9500 !important;
+}
+
+:root[data-tema="escuro"] .resposta-incorreta .feedback-questao {
+	background: #3d1a15;
+	color: #ffbba6;
+}
+
+:root[data-contraste="alto"] .secao-quiz-tecnico {
+	border: 3px solid #000000;
+}
+
+:root[data-tema="escuro"][data-contraste="alto"] .secao-quiz-tecnico {
+	border: 3px solid #ffffff;
+}

@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+/* Página "Raio-X" (specs.html) e página de detalhes exibida no quadro (google-glass.html). */
+
+#raio-x {
+	display: grid;
+	gap: 1.5rem;
+	margin-top: 1rem;
+}
+
+.esquema {
+	position: relative;
+	margin: 0;
+}
+
+.esquema img {
+	display: block;
+	width: 100%;
+}
+
+.pontos {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Cada ponto vermelho é um link posicionado em porcentagem sobre o esquema,
+   por isso acompanha a imagem em qualquer largura. */
+.pontos a {
+	position: absolute;
+	display: grid;
+	place-items: center;
+	width: 2.75rem;
+	height: 2.75rem;
+	border: 2px solid var(--branco);
+	border-radius: 50%;
+	background-color: var(--vermelho);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+	color: var(--branco);
+	font-weight: bold;
+	text-decoration: none;
+	transform: translate(-50%, -50%);
+	transition: transform 0.3s;
+}
+
+.pontos a:hover,
+.pontos a:focus-visible {
+	color: var(--branco);
+	transform: translate(-50%, -50%) scale(1.15);
+}
+
+.pontos .rotulo {
+	position: absolute;
+	top: calc(100% + 0.2rem);
+	left: 50%;
+	padding: 0 0.3rem;
+	border-radius: 3px;
+	background-color: var(--branco);
+	color: var(--preto);
+	font-size: 0.8rem;
+	font-weight: normal;
+	white-space: nowrap;
+	transform: translateX(-50%);
+}
+
+.ponto-tela {
+	left: 16.7%;
+	top: 50.5%;
+}
+
+.ponto-camera {
+	left: 35.8%;
+	top: 53.9%;
+}
+
+.ponto-sensores {
+	left: 59.2%;
+	top: 46%;
+}
+
+.ponto-gadgets {
+	left: 90.8%;
+	top: 56.6%;
+}
+
+#frame-spec {
+	display: block;
+	width: 100%;
+	height: 27rem;
+	border: 1px solid var(--cinza-medio);
+}
+
+@media (min-width: 48rem) {
+	#raio-x {
+		grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+		align-items: start;
+	}
+}
+
+/* ---------- google-glass.html ---------- */
+
+body.detalhes {
+	padding: 0.75rem;
+	background-color: var(--branco);
+	font-size: 0.9rem;
+}
+
+.detalhes h1 {
+	margin: 0 0 1rem;
+	font-family: var(--fonte-logo);
+	font-size: 1.5rem;
+	color: var(--cinza-escuro);
+}
+
+.detalhes section {
+	margin-bottom: 1.5rem;
+}
+
+.detalhes section::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.detalhes h2 {
+	margin: 0;
+	padding: 0.3rem 0.5rem;
+	background-color: var(--cinza-escuro);
+	font-size: 1.25rem;
+	color: var(--branco);
+}
+
+.detalhes .subtitulo {
+	margin: 0.25rem 0 0.75rem;
+	font-size: 1.05rem;
+	font-weight: bold;
+	color: var(--cinza-texto);
+}
+
+.detalhes section > p:not(.subtitulo) {
+	text-indent: 1.5em;
+}
+
+.detalhes section img {
+	display: block;
+	margin: 0 auto;
+}
+
+.detalhes img.img-dir {
+	float: right;
+	width: 45%;
+	margin: 0 0 0.5rem 0.75rem;
+}
+
+/* O convite "clique nos pontos" só faz sentido dentro do quadro de specs.html
+   (classe "em-quadro", posta por quadro.js) enquanto nenhum recurso foi escolhido. */
+.detalhes #topo {
+	display: none;
+	text-align: center;
+}
+
+.em-quadro .detalhes main:not(:has(:target)) > #topo {
+	display: block;
+}
+
+.em-quadro .detalhes main:not(:has(:target)) > :not(#topo) {
+	display: none;
+}
+
+.detalhes #topo h2 {
+	margin-bottom: 1rem;
+	background-color: transparent;
+	color: var(--cinza-texto);
+}
+
+/* Com uma seção em foco (link com #âncora), só ela aparece: substitui o antigo
+   "margin-bottom: 800px". Sem âncora, a página mostra todos os recursos. */
+.detalhes main:has(:target) > :not(:target) {
+	display: none;
+}

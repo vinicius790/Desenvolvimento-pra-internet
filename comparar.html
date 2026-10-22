@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Comparar modelos do Google Glass | Tudo sobre Google Glass</title>
+	<meta name="description" content="Comparador das versões do Google Glass: escolha de 2 a 3 modelos e veja as especificações lado a lado, com as diferenças destacadas.">
+	<link rel="alternate" hreflang="pt-BR" href="comparar.html">
+	<link rel="alternate" hreflang="en" href="en/compare.html">
+	<link rel="alternate" hreflang="x-default" href="comparar.html">
+	<link rel="icon" href="_imagens/glass-oculos.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="_css/estilo.css">
+	<link rel="stylesheet" href="_css/comparar.css">
+	<link rel="stylesheet" href="_css/audio-guia.css">
+	<script src="_javascript/tema.js"></script>
+	<script src="_javascript/funcoes.js" defer></script>
+	<script src="_dados/modelos.js" defer></script>
+	<script src="_javascript/dados.js" defer></script>
+	<script src="_javascript/comparar.js" defer></script>
+	<script src="_javascript/audio-guia.js" defer></script>
+</head>
+<body>
+	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+	<div id="interface">
+		<header id="cabecalho">
+			<div class="marca">
+				<p class="nome-site"><a href="index.html">Google Glass</a></p>
+				<p class="slogan">A revolução do Google está chegando</p>
+				<img class="logo" src="_imagens/glass-logo.svg" alt="" width="160" height="40">
+			</div>
+			<nav id="menu" aria-label="Menu principal">
+				<ul>
+					<li><a href="index.html" data-icone="_imagens/home.svg">Home</a></li>
+					<li><a href="specs.html" data-icone="_imagens/especificacoes.svg">Especificações</a></li>
+					<li><a href="comparar.html" data-icone="_imagens/comparar.svg" aria-current="page">Comparar</a></li>
+					<li><a href="linha-do-tempo.html" data-icone="_imagens/linha-do-tempo.svg">Linha do tempo</a></li>
+					<li><a href="fotos.html" data-icone="_imagens/fotos.svg">Fotos</a></li>
+					<li><a href="multimidia.html" data-icone="_imagens/multimidia.svg">Multimídia</a></li>
+					<li><a href="fale-conosco.html" data-icone="_imagens/contato.svg">Fale conosco</a></li>
+				</ul>
+			</nav>
+			<div class="ferramentas">
+				<form class="busca" role="search" action="busca.html">
+					<label class="so-leitor" for="busca-topo">Buscar no site</label>
+					<input type="search" id="busca-topo" name="q" placeholder="Buscar no site" minlength="2" required>
+					<button type="submit" class="botao-icone"><span class="icone-lupa" aria-hidden="true"></span><span class="so-leitor">Buscar</span></button>
+				</form>
+				<button type="button" class="botao-icone" id="alternar-tema" aria-pressed="false"><span class="icone-tema" aria-hidden="true"></span><span class="so-leitor">Modo escuro</span></button>
+				<button type="button" class="botao-icone" id="alternar-contraste" aria-label="Alto contraste" aria-pressed="false"><span class="icone-contraste" aria-hidden="true"></span></button>
+				<button type="button" class="botao-icone" id="alternar-fonte" aria-label="Aumentar tamanho da fonte (A+)" aria-pressed="false" title="Alternar tamanho da fonte (A+ / A-)"><span class="icone-fonte" aria-hidden="true">A+</span><span class="so-leitor">Aumentar tamanho da fonte</span></button>
+				<button type="button" class="botao-icone" id="alternar-audio-guia" aria-label="Ouvir áudio-guia da página" aria-pressed="false" aria-expanded="false"><span class="icone-audio-guia" aria-hidden="true"></span><span class="so-leitor">Áudio-guia</span></button>
+				<a class="idioma" href="en/compare.html" hreflang="en" lang="en">English</a>
+			</div>
+			<img id="icone" src="_imagens/comparar.svg" alt="" width="120" height="90">
+		</header>
+		<div id="painel-audio-guia" class="painel-audio-guia" hidden aria-hidden="true"></div>
+
+		<main id="conteudo">
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<p class="trilha">Glass &rsaquo; Comparar</p>
+					<h1>Comparar modelos do Google Glass</h1>
+					<p class="autor">por Pedro Henrique</p>
+					<p class="data">Atualizado em <time datetime="2026-10-02">2 de outubro de 2026</time></p>
+				</header>
+
+				<p>O Glass teve quatro versões entre 2013 e 2019: duas edições Explorer, para desenvolvedores e entusiastas, e duas edições Enterprise, para empresas. Escolha de 2 a 3 modelos para ver as especificações lado a lado.</p>
+
+				<section id="comparador" data-dados="_dados/modelos.js" aria-labelledby="titulo-comparador">
+					<h2 id="titulo-comparador">Escolha os modelos</h2>
+					<fieldset id="selecao" aria-describedby="ajuda-selecao">
+						<legend>Modelos para comparar</legend>
+						<span class="dica" id="ajuda-selecao">Marque de 2 a 3 modelos. As linhas com valores diferentes ganham o sinal ≠ e uma barra vermelha.</span>
+						<div id="opcoes-modelos"></div>
+					</fieldset>
+					<p class="opcao">
+						<input type="checkbox" id="so-diferencas">
+						<label for="so-diferencas">Mostrar só as diferenças</label>
+					</p>
+					<p><button type="button" id="compartilhar-comparacao" disabled>Copiar link da comparação</button></p>
+					<p id="aviso-comparador" role="status"></p>
+					<div class="rolagem">
+						<table id="tabela-comparacao">
+							<caption>Especificações dos modelos escolhidos</caption>
+							<thead></thead>
+							<tbody></tbody>
+						</table>
+					</div>
+				</section>
+
+				<section id="graficos-comparativos" class="secao-graficos" aria-labelledby="titulo-graficos">
+					<h2 id="titulo-graficos">Comparativo Técnico &amp; Evolução dos Wearables (2013 – 2024)</h2>
+					<p>Uma década de evolução da computação vestível: compare lado a lado o pioneirismo do Google Glass Explorer (2013), a maturidade industrial da Enterprise Edition 2 (2019), os óculos com IA integrada Meta Ray-Ban (2023) e o salto para a computação espacial com o Apple Vision Pro (2024).</p>
+
+					<div id="seletor-metricas" class="seletor-metricas" role="tablist" aria-label="Métricas de comparação">
+						<button type="button" class="btn-metrica ativo" data-metrica="peso" role="tab" aria-selected="true" id="tab-peso">Peso (g)</button>
+						<button type="button" class="btn-metrica" data-metrica="bateria" role="tab" aria-selected="false" id="tab-bateria">Bateria &amp; Autonomia</button>
+						<button type="button" class="btn-metrica" data-metrica="resolucao" role="tab" aria-selected="false" id="tab-resolucao">Resolução de Tela</button>
+						<button type="button" class="btn-metrica" data-metrica="fov" role="tab" aria-selected="false" id="tab-fov">Campo de Visão (FoV)</button>
+						<button type="button" class="btn-metrica" data-metrica="casos-uso" role="tab" aria-selected="false" id="tab-casos-uso">Casos de Uso</button>
+					</div>
+
+					<div class="container-grafico">
+						<canvas id="canvas-grafico-comparativo" width="700" height="340" role="img" aria-label="Gráfico de barras comparativo entre Google Glass Explorer, Enterprise 2, Meta Ray-Ban e Apple Vision Pro"></canvas>
+					</div>
+
+					<div id="painel-metricas-acessivel" class="painel-metricas" role="tabpanel" aria-labelledby="tab-peso"></div>
+
+					<div id="cards-evolucao" class="cards-evolucao"></div>
+				</section>
+				<noscript>
+					<p class="nota">O comparador depende de JavaScript, que está desativado neste navegador.</p>
+				</noscript>
+
+				<div class="nota" role="note">
+					<p>Valores conferidos nas fichas técnicas do Google e em reportagens da época (fontes abaixo). Veja também a <a href="linha-do-tempo.html">linha do tempo do produto</a>.</p>
+					<ul id="fontes-modelos" class="fontes" aria-label="Fontes das especificações"></ul>
+				</div>
+			</article>
+		</main>
+
+		<footer id="rodape">
+			<p>Copyright &copy; 2017 - by Pedro Henrique</p>
+			<p>
+				<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook<span class="so-leitor"> (abre em nova aba)</span></a> |
+				<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter<span class="so-leitor"> (abre em nova aba)</span></a>
+			</p>
+			<p class="credito">Site-exercício do curso de HTML5 e CSS3 do Curso em Vídeo, de Gustavo Guanabara. Ilustrações próprias; não é um site oficial do Google.</p>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Linha do tempo do Google Glass | Tudo sobre Google Glass</title>
+	<meta name="description" content="A história do Google Glass em dez datas, do anúncio do Project Glass em 2012 ao fim do produto em 2023, em uma linha do tempo navegável pelo teclado.">
+	<link rel="alternate" hreflang="pt-BR" href="linha-do-tempo.html">
+	<link rel="alternate" hreflang="en" href="en/timeline.html">
+	<link rel="alternate" hreflang="x-default" href="linha-do-tempo.html">
+	<link rel="icon" href="_imagens/glass-oculos.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="_css/estilo.css">
+	<link rel="stylesheet" href="_css/linha.css">
+	<link rel="stylesheet" href="_css/audio-guia.css">
+	<script src="_javascript/tema.js"></script>
+	<script src="_javascript/funcoes.js" defer></script>
+	<script src="_dados/linha-do-tempo.js" defer></script>
+	<script src="_javascript/dados.js" defer></script>
+	<script src="_javascript/linha-do-tempo.js" defer></script>
+	<script src="_javascript/audio-guia.js" defer></script>
+</head>
+<body>
+	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+	<div id="interface">
+		<header id="cabecalho">
+			<div class="marca">
+				<p class="nome-site"><a href="index.html">Google Glass</a></p>
+				<p class="slogan">A revolução do Google está chegando</p>
+				<img class="logo" src="_imagens/glass-logo.svg" alt="" width="160" height="40">
+			</div>
+			<nav id="menu" aria-label="Menu principal">
+				<ul>
+					<li><a href="index.html" data-icone="_imagens/home.svg">Home</a></li>
+					<li><a href="specs.html" data-icone="_imagens/especificacoes.svg">Especificações</a></li>
+					<li><a href="comparar.html" data-icone="_imagens/comparar.svg">Comparar</a></li>
+					<li><a href="linha-do-tempo.html" data-icone="_imagens/linha-do-tempo.svg" aria-current="page">Linha do tempo</a></li>
+					<li><a href="fotos.html" data-icone="_imagens/fotos.svg">Fotos</a></li>
+					<li><a href="multimidia.html" data-icone="_imagens/multimidia.svg">Multimídia</a></li>
+					<li><a href="fale-conosco.html" data-icone="_imagens/contato.svg">Fale conosco</a></li>
+				</ul>
+			</nav>
+			<div class="ferramentas">
+				<form class="busca" role="search" action="busca.html">
+					<label class="so-leitor" for="busca-topo">Buscar no site</label>
+					<input type="search" id="busca-topo" name="q" placeholder="Buscar no site" minlength="2" required>
+					<button type="submit" class="botao-icone"><span class="icone-lupa" aria-hidden="true"></span><span class="so-leitor">Buscar</span></button>
+				</form>
+				<button type="button" class="botao-icone" id="alternar-tema" aria-pressed="false"><span class="icone-tema" aria-hidden="true"></span><span class="so-leitor">Modo escuro</span></button>
+				<button type="button" class="botao-icone" id="alternar-contraste" aria-label="Alto contraste" aria-pressed="false"><span class="icone-contraste" aria-hidden="true"></span></button>
+				<button type="button" class="botao-icone" id="alternar-fonte" aria-label="Aumentar tamanho da fonte (A+)" aria-pressed="false" title="Alternar tamanho da fonte (A+ / A-)"><span class="icone-fonte" aria-hidden="true">A+</span><span class="so-leitor">Aumentar tamanho da fonte</span></button>
+				<button type="button" class="botao-icone" id="alternar-audio-guia" aria-label="Ouvir áudio-guia da página" aria-pressed="false" aria-expanded="false"><span class="icone-audio-guia" aria-hidden="true"></span><span class="so-leitor">Áudio-guia</span></button>
+				<a class="idioma" href="en/timeline.html" hreflang="en" lang="en">English</a>
+			</div>
+			<img id="icone" src="_imagens/linha-do-tempo.svg" alt="" width="120" height="90">
+		</header>
+		<div id="painel-audio-guia" class="painel-audio-guia" hidden aria-hidden="true"></div>
+
+		<main id="conteudo">
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<p class="trilha">Glass &rsaquo; Linha do tempo</p>
+					<h1>Linha do tempo do Google Glass</h1>
+					<p class="autor">por Pedro Henrique</p>
+					<p class="data">Atualizado em <time datetime="2026-10-02">2 de outubro de 2026</time></p>
+				</header>
+
+				<p>Do anúncio em 2012 à descontinuação em 2023, a história do Glass cabe em dez datas. Escolha uma data para ler o que aconteceu.</p>
+
+				<section id="linha-do-tempo" data-dados="_dados/linha-do-tempo.js" aria-labelledby="titulo-eventos">
+					<h2 id="titulo-eventos">Do anúncio ao fim</h2>
+					<span class="dica" id="ajuda-eventos">No teclado: Tab chega às datas, as setas trocam de data, Home e End vão à primeira e à última.</span>
+					<div id="eventos" class="eventos" role="tablist" aria-label="Datas da história do Glass" aria-describedby="ajuda-eventos"></div>
+					<div id="evento" class="evento" role="tabpanel" tabindex="0"></div>
+					<p class="acoes">
+						<button type="button" class="botao botao-secundario" id="evento-anterior">Anterior</button>
+						<button type="button" class="botao" id="evento-proximo">Próximo</button>
+					</p>
+				</section>
+				<noscript>
+					<p class="nota">A linha do tempo depende de JavaScript, que está desativado neste navegador. O resumo da história está na nota de revisão da <a href="index.html">página inicial</a>.</p>
+				</noscript>
+
+				<p>Quer ver o que mudou de uma versão para outra? Use o <a href="comparar.html">comparador de modelos</a>.</p>
+			</article>
+		</main>
+
+		<footer id="rodape">
+			<p>Copyright &copy; 2017 - by Pedro Henrique</p>
+			<p>
+				<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook<span class="so-leitor"> (abre em nova aba)</span></a> |
+				<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter<span class="so-leitor"> (abre em nova aba)</span></a>
+			</p>
+			<p class="credito">Site-exercício do curso de HTML5 e CSS3 do Curso em Vídeo, de Gustavo Guanabara. Ilustrações próprias; não é um site oficial do Google.</p>
+		</footer>
+	</div>
+</body>
+</html>

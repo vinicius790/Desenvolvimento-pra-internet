@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180" role="img">
+	<title>Bateria carregada do Glass e ondas de conexão sem fio</title>
+	<rect width="320" height="180" fill="#eef3f7"/>
+	<rect x="30" y="54" width="150" height="72" rx="10" fill="#ffffff" stroke="#404040" stroke-width="5"/>
+	<rect x="180" y="74" width="14" height="32" rx="4" fill="#404040"/>
+	<rect x="42" y="66" width="28" height="48" rx="3" fill="#43a047"/>
+	<rect x="76" y="66" width="28" height="48" rx="3" fill="#43a047"/>
+	<rect x="110" y="66" width="28" height="48" rx="3" fill="#43a047"/>
+	<rect x="144" y="66" width="24" height="48" rx="3" fill="#c8e6c9"/>
+	<g fill="none" stroke="#2f6fd0" stroke-width="6" stroke-linecap="round">
+	<path d="M222 82 Q258 50 294 82"/>
+	<path d="M236 100 Q258 82 280 100"/>
+	</g>
+	<circle cx="258" cy="120" r="7" fill="#2f6fd0"/>
+	<text x="160" y="162" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#404040" text-anchor="middle">Wi-Fi · Bluetooth</text>
+</svg>

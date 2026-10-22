@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80" role="img">
+	<title>Grade do alto-falante de um rádio antigo</title>
+	<defs>
+	<pattern id="trama" width="12" height="12" patternUnits="userSpaceOnUse">
+	<rect width="12" height="12" fill="#c9a36b"/>
+	<circle cx="6" cy="6" r="3" fill="#8a6234"/>
+	</pattern>
+	</defs>
+	<rect width="300" height="80" rx="10" fill="#5a3417"/>
+	<rect x="10" y="10" width="280" height="60" rx="6" fill="url(#trama)"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+	<title>Visão de uma rua com um cartão de agenda e lembretes flutuando no canto</title>
+	<defs>
+	<linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
+	<stop offset="0" stop-color="#b3d9f2"/>
+	<stop offset="1" stop-color="#eaf4fb"/>
+	</linearGradient>
+	</defs>
+	<rect width="800" height="600" fill="url(#ceu)"/>
+	<rect x="0" y="210" width="150" height="270" fill="#90a4ae"/>
+	<rect x="150" y="150" width="130" height="330" fill="#b0bec5"/>
+	<rect x="280" y="250" width="120" height="230" fill="#78909c"/>
+	<rect x="620" y="190" width="180" height="290" fill="#90a4ae"/>
+	<rect x="0" y="480" width="800" height="120" fill="#546e7a"/>
+	<path d="M60 540 H180 M260 540 H380 M460 540 H580 M660 540 H780" stroke="#ffffff" stroke-width="8"/>
+	<rect x="400" y="70" width="350" height="260" rx="18" fill="#1a1a1a" fill-opacity=".78"/>
+	<text x="430" y="140" font-size="56" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#ffffff">14:00</text>
+	<text x="430" y="182" font-size="28" font-family="Arial, Helvetica, sans-serif" fill="#ffffff">Reunião de equipe</text>
+	<path d="M430 204 H720" stroke="#ffffff" stroke-opacity=".5" stroke-width="2"/>
+	<circle cx="442" cy="244" r="10" fill="none" stroke="#ffffff" stroke-width="3"/>
+	<text x="466" y="253" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#ffffff">Comprar pão</text>
+	<circle cx="442" cy="290" r="10" fill="#8bc34a"/>
+	<text x="466" y="299" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#ffffff">Ligar para a Ana</text>
+</svg>

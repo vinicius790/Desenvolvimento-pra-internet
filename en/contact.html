@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact us | All about Google Glass</title>
+	<meta name="description" content="Contact and order form for Google Glass, with validation and a summary shown on the page itself, without sending any data.">
+	<link rel="alternate" hreflang="pt-BR" href="../fale-conosco.html">
+	<link rel="alternate" hreflang="en" href="contact.html">
+	<link rel="alternate" hreflang="x-default" href="../fale-conosco.html">
+	<link rel="icon" href="../_imagens/glass-oculos.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="../_css/estilo.css">
+	<link rel="stylesheet" href="../_css/form.css">
+	<script src="../_javascript/tema.js"></script>
+	<script src="../_javascript/funcoes.js" defer></script>
+	<script src="../_javascript/pedido.js" defer></script>
+</head>
+<body>
+	<a class="pular" href="#conteudo">Skip to content</a>
+	<div id="interface">
+		<header id="cabecalho">
+			<div class="marca">
+				<p class="nome-site"><a href="index.html">Google Glass</a></p>
+				<p class="slogan">Google’s revolution is coming</p>
+				<img class="logo" src="../_imagens/glass-logo.svg" alt="" width="160" height="40">
+			</div>
+			<nav id="menu" aria-label="Main menu">
+				<ul>
+					<li><a href="index.html" data-icone="../_imagens/home.svg">Home</a></li>
+					<li><a href="specs.html" data-icone="../_imagens/especificacoes.svg">Specs</a></li>
+					<li><a href="compare.html" data-icone="../_imagens/comparar.svg">Compare</a></li>
+					<li><a href="timeline.html" data-icone="../_imagens/linha-do-tempo.svg">Timeline</a></li>
+					<li><a href="photos.html" data-icone="../_imagens/fotos.svg">Photos</a></li>
+					<li><a href="multimedia.html" data-icone="../_imagens/multimidia.svg">Multimedia</a></li>
+					<li><a href="contact.html" data-icone="../_imagens/contato.svg" aria-current="page">Contact us</a></li>
+				</ul>
+			</nav>
+			<div class="ferramentas">
+				<form class="busca" role="search" action="search.html">
+					<label class="so-leitor" for="busca-topo">Search the site</label>
+					<input type="search" id="busca-topo" name="q" placeholder="Search the site" minlength="2" required>
+					<button type="submit" class="botao-icone"><span class="icone-lupa" aria-hidden="true"></span><span class="so-leitor">Search</span></button>
+				</form>
+				<button type="button" class="botao-icone" id="alternar-tema" aria-pressed="false"><span class="icone-tema" aria-hidden="true"></span><span class="so-leitor">Dark mode</span></button>
+				<button type="button" class="botao-icone" id="alternar-contraste" aria-label="High contrast" aria-pressed="false"><span class="icone-contraste" aria-hidden="true"></span></button>
+				<button type="button" class="botao-icone" id="alternar-fonte" aria-label="Increase font size (A+)" aria-pressed="false" title="Toggle font size (A+ / A-)"><span class="icone-fonte" aria-hidden="true">A+</span><span class="so-leitor">Increase font size</span></button>
+				<a class="idioma" href="../fale-conosco.html" hreflang="pt-BR" lang="pt-BR">Português</a>
+			</div>
+			<img id="icone" src="../_imagens/contato.svg" alt="" width="120" height="90">
+		</header>
+
+		<main id="conteudo">
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<p class="trilha">Contact us &rsaquo; Contact</p>
+					<h1>Contact Form</h1>
+					<p class="autor">by Pedro Henrique</p>
+					<p class="data">Updated on <time datetime="2017-12-11">December 11, 2017</time></p>
+				</header>
+
+				<p class="intro-form">Use the form to send a message or register your interest in a Google Glass. Fields marked with <span aria-hidden="true">*</span><span class="so-leitor">an asterisk</span> are required.</p>
+				<p class="intro-form">This form is an exercise: nothing is sent to any server. When you click Send, the summary shows up on this very page.</p>
+
+				<!-- method="dialog" outside a <dialog> sends nothing, even with JavaScript turned off. -->
+				<form id="fContato" method="dialog" data-preco="1500">
+					<fieldset id="usuario">
+						<legend>User Identification</legend>
+						<p class="campo">
+							<label for="cNome">Name: <span aria-hidden="true">*</span></label>
+							<input type="text" name="tNome" id="cNome" maxlength="60" placeholder="Full name" autocomplete="name" required>
+						</p>
+						<p class="campo">
+							<label for="cEmail">Email: <span aria-hidden="true">*</span></label>
+							<input type="email" name="tEmail" id="cEmail" maxlength="80" placeholder="name@example.com" autocomplete="email" required>
+						</p>
+						<fieldset id="sexo">
+							<legend>Sex:</legend>
+							<p class="opcao">
+								<input type="radio" name="tSexo" id="cMasc" value="Male">
+								<label for="cMasc">Male</label>
+							</p>
+							<p class="opcao">
+								<input type="radio" name="tSexo" id="cFem" value="Female">
+								<label for="cFem">Female</label>
+							</p>
+							<p class="opcao">
+								<input type="radio" name="tSexo" id="cNaoInf" value="Prefer not to say">
+								<label for="cNaoInf">Prefer not to say</label>
+							</p>
+						</fieldset>
+						<p class="campo">
+							<label for="cNasc">Date of birth:</label>
+							<input type="date" name="tNasc" id="cNasc" autocomplete="bday">
+						</p>
+					</fieldset>
+
+					<fieldset id="endereco">
+						<legend>User Address</legend>
+						<p class="campo">
+							<label for="cRua">Street address:</label>
+							<input type="text" name="tRua" id="cRua" maxlength="80" placeholder="Street, Ave., ..." autocomplete="address-line1">
+						</p>
+						<p class="campo">
+							<label for="cNum">Number:</label>
+							<input type="text" name="tNum" id="cNum" maxlength="6" inputmode="numeric" autocomplete="off">
+						</p>
+						<p class="campo">
+							<label for="cEst">State (Brazil):</label>
+							<select name="tEst" id="cEst" autocomplete="address-level1">
+								<option value="">Select the state</option>
+								<optgroup label="North region">
+									<option value="AC">Acre</option>
+									<option value="AP">Amapá</option>
+									<option value="AM">Amazonas</option>
+									<option value="PA">Pará</option>
+									<option value="RO">Rondônia</option>
+									<option value="RR">Roraima</option>
+									<option value="TO">Tocantins</option>
+								</optgroup>
+								<optgroup label="Northeast region">
+									<option value="AL">Alagoas</option>
+									<option value="BA">Bahia</option>
+									<option value="CE">Ceará</option>
+									<option value="MA">Maranhão</option>
+									<option value="PB">Paraíba</option>
+									<option value="PE">Pernambuco</option>
+									<option value="PI">Piauí</option>
+									<option value="RN">Rio Grande do Norte</option>
+									<option value="SE">Sergipe</option>
+								</optgroup>
+								<optgroup label="Central-West region">
+									<option value="DF">Distrito Federal</option>
+									<option value="GO">Goiás</option>
+									<option value="MT">Mato Grosso</option>
+									<option value="MS">Mato Grosso do Sul</option>
+								</optgroup>
+								<optgroup label="Southeast region">
+									<option value="ES">Espírito Santo</option>
+									<option value="MG">Minas Gerais</option>
+									<option value="RJ">Rio de Janeiro</option>
+									<option value="SP">São Paulo</option>
+								</optgroup>
+								<optgroup label="South region">
+									<option value="PR">Paraná</option>
+									<option value="RS">Rio Grande do Sul</option>
+									<option value="SC">Santa Catarina</option>
+								</optgroup>
+							</select>
+						</p>
+						<p class="campo">
+							<label for="cCid">City:</label>
+							<input type="text" name="tCid" id="cCid" maxlength="40" placeholder="Your city" list="cidades" autocomplete="address-level2">
+						</p>
+						<datalist id="cidades">
+							<option value="Rio de Janeiro"></option>
+							<option value="Nova Iguaçu"></option>
+							<option value="Niterói"></option>
+							<option value="Belford Roxo"></option>
+						</datalist>
+					</fieldset>
+
+					<fieldset id="mensagem">
+						<legend>User Message</legend>
+						<p class="campo">
+							<span class="rotulo"><label for="cUrg">Urgency:</label> <output id="vUrg" for="cUrg">4</output> out of 10</span>
+							<span class="faixa">
+								<span aria-hidden="true">Min</span>
+								<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2" value="4">
+								<span aria-hidden="true">Max</span>
+							</span>
+						</p>
+						<p class="campo">
+							<label for="cMsg">Message:</label>
+							<textarea name="tMsg" id="cMsg" rows="5" maxlength="500" placeholder="Leave your message here" aria-describedby="dica-msg"></textarea>
+							<span class="dica" id="dica-msg">Required if you are not ordering a Google Glass.</span>
+						</p>
+					</fieldset>
+
+					<fieldset id="pedido">
+						<legend>I want a Google Glass</legend>
+						<p class="opcao">
+							<input type="checkbox" name="tPed" id="cPed" checked>
+							<label for="cPed">I would like to buy a Google Glass when available</label>
+						</p>
+						<p class="campo">
+							<label for="cCor">Color:</label>
+							<input type="color" name="tCor" id="cCor" value="#0000ff">
+						</p>
+						<p class="campo">
+							<label for="cQtd">Quantity:</label>
+							<input type="number" name="tQtd" id="cQtd" min="1" max="5" value="1" required aria-describedby="dica-qtd">
+							<span class="dica" id="dica-qtd">1 to 5 units, at $1,500.00 each.</span>
+						</p>
+						<p class="total">Total price: <output id="cTot" for="cQtd cPed">$1,500.00</output></p>
+					</fieldset>
+
+					<p id="aviso-form" role="alert" aria-live="polite"></p>
+					<noscript>
+						<p class="nota">The contact summary and the total calculation need JavaScript, which is turned off in this browser. Nothing is sent.</p>
+					</noscript>
+					<p class="acoes">
+						<button type="submit" class="botao"><img src="../_imagens/botao-enviar.svg" alt="" width="24" height="24"> Send</button>
+						<button type="reset" class="botao botao-secundario">Clear</button>
+					</p>
+				</form>
+
+				<section id="resumo" tabindex="-1" aria-labelledby="resumo-titulo" hidden>
+					<h2 id="resumo-titulo">Summary of your contact</h2>
+					<p>Check the data below. Nothing was sent: it only exists on this page and is gone when the page is reloaded.</p>
+					<dl id="resumo-lista"></dl>
+				</section>
+			</article>
+		</main>
+
+		<footer id="rodape">
+			<p>Copyright &copy; 2017 - by Pedro Henrique</p>
+			<p>
+				<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook<span class="so-leitor"> (opens in a new tab)</span></a> |
+				<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter<span class="so-leitor"> (opens in a new tab)</span></a>
+			</p>
+			<p class="credito">Exercise site from the HTML5 and CSS3 course by Curso em Vídeo (Gustavo Guanabara). Original illustrations; not an official Google site.</p>
+		</footer>
+	</div>
+</body>
+</html>

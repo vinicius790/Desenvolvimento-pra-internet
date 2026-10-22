@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Site search | All about Google Glass</title>
+	<meta name="description" content="Internal search for the Google Glass site: type a term and see the pages and sections that contain it, with a snippet of each result.">
+	<link rel="alternate" hreflang="pt-BR" href="../busca.html">
+	<link rel="alternate" hreflang="en" href="search.html">
+	<link rel="alternate" hreflang="x-default" href="../busca.html">
+	<link rel="icon" href="../_imagens/glass-oculos.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="../_css/estilo.css">
+	<link rel="stylesheet" href="../_css/busca.css">
+	<script src="../_javascript/tema.js"></script>
+	<script src="../_javascript/funcoes.js" defer></script>
+	<script src="../_dados/indice-busca.js" defer></script>
+	<script src="../_javascript/dados.js" defer></script>
+	<script src="../_javascript/busca.js" defer></script>
+</head>
+<body>
+	<a class="pular" href="#conteudo">Skip to content</a>
+	<div id="interface">
+		<header id="cabecalho">
+			<div class="marca">
+				<p class="nome-site"><a href="index.html">Google Glass</a></p>
+				<p class="slogan">Google’s revolution is coming</p>
+				<img class="logo" src="../_imagens/glass-logo.svg" alt="" width="160" height="40">
+			</div>
+			<nav id="menu" aria-label="Main menu">
+				<ul>
+					<li><a href="index.html" data-icone="../_imagens/home.svg">Home</a></li>
+					<li><a href="specs.html" data-icone="../_imagens/especificacoes.svg">Specs</a></li>
+					<li><a href="compare.html" data-icone="../_imagens/comparar.svg">Compare</a></li>
+					<li><a href="timeline.html" data-icone="../_imagens/linha-do-tempo.svg">Timeline</a></li>
+					<li><a href="photos.html" data-icone="../_imagens/fotos.svg">Photos</a></li>
+					<li><a href="multimedia.html" data-icone="../_imagens/multimidia.svg">Multimedia</a></li>
+					<li><a href="contact.html" data-icone="../_imagens/contato.svg">Contact us</a></li>
+				</ul>
+			</nav>
+			<div class="ferramentas">
+				<button type="button" class="botao-icone" id="alternar-tema" aria-pressed="false"><span class="icone-tema" aria-hidden="true"></span><span class="so-leitor">Dark mode</span></button>
+				<button type="button" class="botao-icone" id="alternar-contraste" aria-label="High contrast" aria-pressed="false"><span class="icone-contraste" aria-hidden="true"></span></button>
+				<button type="button" class="botao-icone" id="alternar-fonte" aria-label="Increase font size (A+)" aria-pressed="false" title="Toggle font size (A+ / A-)"><span class="icone-fonte" aria-hidden="true">A+</span><span class="so-leitor">Increase font size</span></button>
+				<a class="idioma" href="../busca.html" hreflang="pt-BR" lang="pt-BR">Português</a>
+			</div>
+			<img id="icone" src="../_imagens/busca.svg" alt="" width="120" height="90">
+		</header>
+
+		<main id="conteudo">
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<p class="trilha">Glass &rsaquo; Search</p>
+					<h1>Site search</h1>
+					<p class="autor">by Pedro Henrique</p>
+					<p class="data">Updated on <time datetime="2026-10-02">October 2, 2026</time></p>
+				</header>
+
+				<form id="form-busca" class="busca-principal" role="search" action="search.html">
+					<label for="q">What are you looking for?</label>
+					<input type="search" id="q" name="q" minlength="2" autocomplete="off" required aria-describedby="ajuda-busca">
+					<button type="submit" class="botao">Search</button>
+				</form>
+				<span class="dica" id="ajuda-busca">The search looks through the pages in English, ignores accents and letter case and only shows what contains every term.</span>
+
+				<section id="resultados" data-dados="../_dados/indice-busca.js" data-raiz="../" aria-labelledby="titulo-resultados">
+					<h2 id="titulo-resultados">Results</h2>
+					<p id="estado-busca" role="status" aria-live="polite"></p>
+					<ol id="lista-resultados"></ol>
+				</section>
+				<noscript>
+					<p class="nota">The search needs JavaScript, which is turned off in this browser. Use the menu to browse the pages.</p>
+				</noscript>
+			</article>
+		</main>
+
+		<footer id="rodape">
+			<p>Copyright &copy; 2017 - by Pedro Henrique</p>
+			<p>
+				<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook<span class="so-leitor"> (opens in a new tab)</span></a> |
+				<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter<span class="so-leitor"> (opens in a new tab)</span></a>
+			</p>
+			<p class="credito">Exercise site from the HTML5 and CSS3 course by Curso em Vídeo (Gustavo Guanabara). Original illustrations; not an official Google site.</p>
+		</footer>
+	</div>
+</body>
+</html>

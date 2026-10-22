@@ -1,61 +1,143 @@
 <!DOCTYPE html>
-	<html>
-	<head>
-		<title>Tudo sobre Google Glass</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="_css/estilo.css">
-		<link rel="stylesheet" type="text/css" href="_css/fotos.css">
-	</head>
-	<script language="javascript" src="_javascript/funcoes.js"></script>
-	<body>
-		<div id="interface">
-			<header id="cabecalho">
-				<hgroup>
-					<h1>Google Glass</h1>
-					<h2>A revolução do Google está chegando</h2>
-				</hgroup>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Galeria de imagens do Google Glass | Tudo sobre Google Glass</title>
+	<meta name="description" content="Galeria com seis ilustrações sobre o Google Glass: agenda, uso no dia a dia, leveza, tela virtual, tipos de lente e informações em tempo real.">
+	<link rel="alternate" hreflang="pt-BR" href="fotos.html">
+	<link rel="alternate" hreflang="en" href="en/photos.html">
+	<link rel="alternate" hreflang="x-default" href="fotos.html">
+	<link rel="icon" href="_imagens/glass-oculos.svg" type="image/svg+xml">
 
-				<img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+	<!-- Metadados Enriquecidos (SEO, OpenGraph & Schema.org) -->
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Galeria de imagens históricas do Google Glass">
+	<meta property="og:description" content="Explore fotos e infográficos históricos detalhando os recursos, peso, interface e lentes do Google Glass.">
+	<meta property="og:image" content="_imagens/galeria-01.svg">
+	<meta property="og:locale" content="pt_BR">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Galeria de Imagens do Google Glass">
+	<meta name="twitter:description" content="seis ilustrações históricas do Google Glass: interface HUD, leveza, tela virtual e lentes.">
+	<meta name="twitter:image" content="_imagens/galeria-01.svg">
 
-				<nav id="menu">
-					<h1>Menu Principal</h1>
-					<ul>
-						<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="index.html">Home</a></li>
-						<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="specs.html">Especificações</a></li>
-						<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="fotos.html">Fotos</a></li>
-						<li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="multimidia.html">Multimídia</a></li>
-						<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/fotos.png')"><a href="fale-conosco.html">Fale conosco</a></li>
-					</ul>
-				</nav>
-			</header>
 
-			<section id="corp-full">
-				<article id="noticia-principal">
-					<header id="cabecalho-artigo">
-						<hgroup>
-							<h3>Glass > Fotos</h3>
-							<h1>Galeria de Imagens do Google Glass</h1>
-							<h2>por Pedro Henrique</h2>
-							<h3 class="direita">Atualizado em 11/Dezembro/2017</h3>
-						</hgroup>
-					</header>
+	<link rel="stylesheet" href="_css/estilo.css">
+	<link rel="stylesheet" href="_css/fotos.css">
+	<link rel="stylesheet" href="_css/audio-guia.css">
+	<script src="_javascript/tema.js"></script>
+	<script src="_javascript/funcoes.js" defer></script>
+	<script src="_javascript/galeria.js" defer></script>
+	<script src="_javascript/audio-guia.js" defer></script>
+</head>
+<body>
+	<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+	<div id="interface">
+		<header id="cabecalho">
+			<div class="marca">
+				<p class="nome-site"><a href="index.html">Google Glass</a></p>
+				<p class="slogan">A revolução do Google está chegando</p>
+				<img class="logo" src="_imagens/glass-logo.svg" alt="Logotipo do Google Glass" width="160" height="40">
+			</div>
+			<nav id="menu" aria-label="Menu principal">
+				<ul>
+					<li><a href="index.html" data-icone="_imagens/home.svg">Home</a></li>
+					<li><a href="specs.html" data-icone="_imagens/especificacoes.svg">Especificações</a></li>
+					<li><a href="comparar.html" data-icone="_imagens/comparar.svg">Comparar</a></li>
+					<li><a href="linha-do-tempo.html" data-icone="_imagens/linha-do-tempo.svg">Linha do tempo</a></li>
+					<li><a href="fotos.html" data-icone="_imagens/fotos.svg" aria-current="page">Fotos</a></li>
+					<li><a href="multimidia.html" data-icone="_imagens/multimidia.svg">Multimídia</a></li>
+					<li><a href="fale-conosco.html" data-icone="_imagens/contato.svg">Fale conosco</a></li>
+				</ul>
+			</nav>
+			<div class="ferramentas">
+				<form class="busca" role="search" action="busca.html">
+					<label class="so-leitor" for="busca-topo">Buscar no site</label>
+					<input type="search" id="busca-topo" name="q" placeholder="Buscar no site" minlength="2" required>
+					<button type="submit" class="botao-icone"><span class="icone-lupa" aria-hidden="true"></span><span class="so-leitor">Buscar</span></button>
+				</form>
+				<button type="button" class="botao-icone" id="alternar-tema" aria-pressed="false"><span class="icone-tema" aria-hidden="true"></span><span class="so-leitor">Modo escuro</span></button>
+				<button type="button" class="botao-icone" id="alternar-contraste" aria-label="Alto contraste" aria-pressed="false"><span class="icone-contraste" aria-hidden="true"></span></button>
+				<button type="button" class="botao-icone" id="alternar-fonte" aria-label="Aumentar tamanho da fonte (A+)" aria-pressed="false" title="Alternar tamanho da fonte (A+ / A-)"><span class="icone-fonte" aria-hidden="true">A+</span><span class="so-leitor">Aumentar tamanho da fonte</span></button>
+				<button type="button" class="botao-icone" id="alternar-audio-guia" aria-label="Ouvir áudio-guia da página" aria-pressed="false" aria-expanded="false"><span class="icone-audio-guia" aria-hidden="true"></span><span class="so-leitor">Áudio-guia</span></button>
+				<a class="idioma" href="en/photos.html" hreflang="en" lang="en">English</a>
+			</div>
+			<img id="icone" src="_imagens/fotos.svg" alt="" aria-hidden="true" width="120" height="90">
+		</header>
+		<div id="painel-audio-guia" class="painel-audio-guia" hidden aria-hidden="true"></div>
 
-					<p>Veja na nossa galeria de fotos várias belas imagens que mostram algumas das principais características do Google Glass, como recursos e propriedades que estão impressionando o mundo inteiro. Basta passar o mouse sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.</p>
+		<main id="conteudo">
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<p class="trilha">Glass &rsaquo; Fotos</p>
+					<h1>Galeria de Imagens do Google Glass</h1>
+					<p class="autor">por Pedro Henrique</p>
+					<p class="data">Atualizado em <time datetime="2017-12-11">11 de dezembro de 2017</time></p>
+				</header>
 
-					<ul id="album-fotos">
-						<li id="foto01"><span>Agenda e lembretes</span></li>
-						<li id="foto02"><span>Sergey Brin usando o Glass</span></li>
-						<li id="foto03"><span>Leve e compacto</span></li>
-						<li id="foto04"><span>Sensação de uma tela de 50"</span></li>
-						<li id="foto05"><span>Vários tipos de lente</span></li>
-						<li id="foto06"><span>Informações importantes</span></li>
-					</ul>
-				</article>
-			</section>
-			<footer id="rodape">
-				<p>Copyright &copy; 2017 - by Pedro Henrique<br>
-				<a href="https://www.facebook.com/" target="blank">Facebook</a> | Twitter</p>
-			</footer>
-		</div>
-	</body>
+				<p>Veja na nossa galeria várias imagens que mostram algumas das principais características do Google Glass, como recursos e propriedades que impressionaram o mundo inteiro. Clique (ou toque) em uma das fotos para ver uma versão ampliada com uma breve descrição. No teclado, use Tab e Enter para abrir e as setas para trocar de foto.</p>
+
+				<ul id="album-fotos">
+					<li id="foto01">
+						<a class="miniatura" href="_imagens/galeria-01.svg">
+							<img src="_imagens/galeria-01.svg" alt="Interface histórica do Google Glass projetando um cartão virtual de compromissos e lembretes sobre a visão de uma rua urbana." width="800" height="600">
+							<span>Agenda e lembretes</span>
+						</a>
+					</li>
+					<li id="foto02">
+						<a class="miniatura" href="_imagens/galeria-02.svg">
+							<img src="_imagens/galeria-02.svg" alt="Demonstração do design ergonômico do Google Glass Explorer Edition com armação de titânio usada por uma pessoa sorrindo." width="800" height="600">
+							<span>Uma pessoa usando o Glass</span>
+						</a>
+					</li>
+					<li id="foto03">
+						<a class="miniatura" href="_imagens/galeria-03.svg">
+							<img src="_imagens/galeria-03.svg" alt="Comparativo de peso do Google Glass pousado ao lado de uma pena leve, enfatizando o peso de apenas 42 gramas." width="800" height="600">
+							<span>Leve e compacto</span>
+						</a>
+					</li>
+					<li id="foto04">
+						<a class="miniatura" href="_imagens/galeria-04.svg">
+							<img src="_imagens/galeria-04.svg" alt="Representação visual do prisma óptico equivalente a uma tela de alta definição de 25 polegadas vista a 2,5 metros de distância." width="800" height="600">
+							<span>Sensação de uma tela de 25"</span>
+						</a>
+					</li>
+					<li id="foto05">
+						<a class="miniatura" href="_imagens/galeria-05.svg">
+							<img src="_imagens/galeria-05.svg" alt="Três variações de armações e lentes intercambiáveis do Google Glass em tons transparente, escuro polarizado e alaranjado." width="800" height="600">
+							<span>Vários tipos de lente</span>
+						</a>
+					</li>
+					<li id="foto06">
+						<a class="miniatura" href="_imagens/galeria-06.svg">
+							<img src="_imagens/galeria-06.svg" alt="Cartão do Google Now no visor do Glass exibindo temperatura de 24°C, ícone de sol entre nuvens e alerta de trânsito em tempo real." width="800" height="600">
+							<span>Informações importantes</span>
+						</a>
+					</li>
+				</ul>
+
+				<dialog id="visor" aria-label="Foto ampliada">
+					<figure>
+						<img id="visor-imagem" src="_imagens/galeria-01.svg" alt="Visualização ampliada da foto histórica do Google Glass" width="800" height="600">
+						<figcaption id="visor-legenda" aria-live="polite"></figcaption>
+					</figure>
+					<div class="visor-controles">
+						<button type="button" class="botao" id="visor-anterior">Anterior</button>
+						<button type="button" class="botao" id="visor-proxima">Próxima</button>
+						<button type="button" class="botao" id="visor-fechar">Fechar</button>
+					</div>
+				</dialog>
+			</article>
+		</main>
+
+		<footer id="rodape">
+			<p>Copyright &copy; 2017 - by Pedro Henrique</p>
+			<p>
+				<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook<span class="so-leitor"> (abre em nova aba)</span></a> |
+				<a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter<span class="so-leitor"> (abre em nova aba)</span></a>
+			</p>
+			<p class="credito">Site-exercício do curso de HTML5 e CSS3 do Curso em Vídeo, de Gustavo Guanabara. Ilustrações próprias; não é um site oficial do Google.</p>
+		</footer>
+	</div>
+</body>
 </html>

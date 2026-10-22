@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180" role="img">
+	<title>Dedo tocando a lateral sensível ao toque do Glass, ao lado de um microfone</title>
+	<rect width="320" height="180" fill="#eef3f7"/>
+	<rect x="20" y="96" width="220" height="40" rx="18" fill="#2b2b2b"/>
+	<rect x="60" y="102" width="150" height="28" rx="10" fill="#606060"/>
+	<g fill="none" stroke="#c62828" stroke-width="4" stroke-linecap="round">
+	<path d="M104 86 Q134 64 164 86"/>
+	<path d="M90 72 Q134 40 178 72"/>
+	</g>
+	<rect x="120" y="16" width="30" height="96" rx="15" fill="#f2c7a5" stroke="#606060" stroke-width="3" transform="rotate(18 135 64)"/>
+	<rect x="262" y="40" width="26" height="54" rx="13" fill="#606060"/>
+	<path d="M252 76 Q252 108 275 108 Q298 108 298 76 M275 108 L275 128 M260 128 L290 128" fill="none" stroke="#606060" stroke-width="4" stroke-linecap="round"/>
+</svg>

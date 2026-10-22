@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="160" height="40" role="img">
+	<title>Glass</title>
+	<g fill="none" stroke="#606060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+	<path d="M34 12 A12 12 0 1 0 36 26 L36 20 L27 20"/>
+	<path d="M50 8 L50 32 L64 32"/>
+	<path d="M74 32 L85 8 L96 32"/>
+	<path d="M124 11 C118 6 107 8 107 14 C107 22 124 18 124 26 C124 33 112 34 106 29"/>
+	<path d="M152 11 C146 6 135 8 135 14 C135 22 152 18 152 26 C152 33 140 34 134 29"/>
+	</g>
+</svg>
